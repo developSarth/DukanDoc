@@ -7,8 +7,8 @@ import AuthLayout from "@/components/AuthLayout";
 export default function OAuthConsent() {
   const ctx = new URLSearchParams(window.location.search).get("ctx") || "demo_ctx";
   const [info, setInfo] = useState({
-    client_name: "LegalAI Client",
-    app_name: "LegalDoc Platform",
+    client_name: "DukanDoc Client",
+    app_name: "DukanDoc Platform",
     authenticated: true,
     tools: [
       { name: "generateChecklist", title: "Generate Checklist", description: "Synthesize compliance requirements" },

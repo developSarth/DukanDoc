@@ -43,8 +43,26 @@ function getTimelineBullets(text) {
     .replace(/^\d+\.\s*/gm, '')
     .split(/(?<=[.!?])\s+/)
     .map((s) => s.trim())
-    .filter((s) => s.length > 2);
+    .filter(Boolean);
   return sentences.length > 0 ? sentences : [text];
+}
+
+function getYoutubeGuides(item) {
+  if (item?.youtube_guides && item.youtube_guides.length > 0) {
+    return item.youtube_guides;
+  }
+  const name = item?.name || 'Compliance Requirement';
+  const query = encodeURIComponent(`${name} online application process India`);
+  return [
+    {
+      title: `How to Apply for ${name} Online (Complete Step-by-Step Guide)`,
+      link: `https://www.youtube.com/results?search_query=${query}`,
+    },
+    {
+      title: `${name} Portal Registration & Required Documents Walkthrough`,
+      link: `https://www.youtube.com/results?search_query=${encodeURIComponent(`${name} registration documents demo`)}`,
+    },
+  ];
 }
 
 const SAMPLE_REQUIREMENTS = {
@@ -553,40 +571,6 @@ export default function RequirementDetail() {
                 </>
               )}
 
-              {/* Block 5: YouTube Video Tutorials & Walkthroughs (Cascading, Dark Green, Compact) */}
-              {item.youtube_guides && item.youtube_guides.length > 0 && (
-                <div className="p-5 sm:p-6">
-                  <h2 className="text-lg sm:text-xl font-heading font-bold text-[#004043] mb-1 flex items-center gap-2">
-                    <PlayCircle className="h-4.5 w-4.5 text-[#004043]" /> Video Tutorials &amp; Walkthroughs
-                  </h2>
-                  <p className="text-xs text-slate-500 mb-3.5 font-normal">
-                    Helpful video tutorials available for this requirement:
-                  </p>
-                  <div className="space-y-2.5">
-                    {item.youtube_guides.map((yt, i) => (
-                      <a
-                        key={i}
-                        href={yt.link}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="p-3 rounded-xl border border-slate-200/90 bg-white hover:border-[#004043] hover:bg-[#004043]/[0.02] transition-all block group shadow-2xs animate-card-stagger"
-                        style={{ animationDelay: `${i * 0.08}s` }}
-                      >
-                        <div className="flex items-center justify-between gap-2">
-                          <div className="flex items-center gap-1.5 text-[11.5px] font-normal text-[#004043]">
-                            <Video className="h-3.5 w-3.5 text-[#004043] flex-shrink-0" />
-                            <span>YouTube Tutorial</span>
-                          </div>
-                          <ExternalLink className="h-3.5 w-3.5 flex-shrink-0 text-slate-400 group-hover:text-[#004043] transition-colors" />
-                        </div>
-                        <h4 className="text-xs sm:text-[13px] font-normal text-[#4B6B6C] group-hover:text-[#004043] transition-colors leading-snug mt-1 line-clamp-2">
-                          {yt.title}
-                        </h4>
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              )}
             </CardContent>
           </Card>
         </div>
@@ -768,7 +752,39 @@ export default function RequirementDetail() {
             </span>
           </div>
 
-          {/* 5. Official Guides & Articles Section (Moved Right Below Expected Timeline) */}
+          {/* 5. Video Tutorials & Walkthroughs Section (Right above Official Guides) */}
+          <div
+            className="rounded-2xl p-4 sm:p-5 border bg-white shadow-xs space-y-3"
+            style={{ borderColor: 'rgba(0,64,67,0.10)' }}
+          >
+            <h3 className="text-sm sm:text-base font-heading font-bold text-[#004043] flex items-center gap-2">
+              <PlayCircle className="h-4 w-4 text-[#004043]" /> Video Tutorials &amp; Walkthroughs
+            </h3>
+            <div className="space-y-2">
+              {getYoutubeGuides(item).map((yt, i) => (
+                <a
+                  key={i}
+                  href={yt.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-3 rounded-xl border border-slate-200/90 bg-white hover:border-[#004043] hover:bg-[#004043]/[0.02] transition-all block group shadow-2xs"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-1.5 text-xs font-normal text-[#004043]">
+                      <Video className="h-3.5 w-3.5 text-[#004043] flex-shrink-0" />
+                      <span>YouTube Tutorial</span>
+                    </div>
+                    <ExternalLink className="h-3.5 w-3.5 flex-shrink-0 text-slate-400 group-hover:text-[#004043] transition-colors" />
+                  </div>
+                  <h4 className="text-xs sm:text-[13px] font-normal text-[#4B6B6C] group-hover:text-[#004043] transition-colors leading-snug mt-1 line-clamp-2">
+                    {yt.title}
+                  </h4>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* 6. Official Guides & Articles Section (Moved Below Video Tutorials) */}
           {((item.web_guides && item.web_guides.length > 0) || (item.sources && item.sources.length > 0)) && (
             <div
               className="rounded-2xl p-4 sm:p-5 border bg-white shadow-xs space-y-3"

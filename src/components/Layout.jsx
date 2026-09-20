@@ -55,7 +55,7 @@ export default function Layout() {
             <Link
               to="/"
               className="flex items-center gap-2 group transition-smooth"
-              aria-label="LegalDoc home"
+              aria-label="DukanDoc home"
             >
               {/* Wordmark + domain */}
               <div className="flex items-baseline gap-0.5">
@@ -255,7 +255,7 @@ export default function Layout() {
             <div className="col-span-2">
               <p className="eyebrow mb-3" style={{ color: 'rgba(243,240,238,0.45)' }}>About</p>
               <p className="text-sm leading-relaxed" style={{ color: 'rgba(243,240,238,0.55)', fontWeight: 400 }}>
-                LegalDoc synthesises public government data from FSSAI, GST, Udyam, municipal wards and
+                DukanDoc synthesises public government data from FSSAI, GST, Udyam, municipal wards and
                 state departments. We&apos;re independent and not affiliated with any government body.
               </p>
             </div>
@@ -266,7 +266,7 @@ export default function Layout() {
             className="border-t pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs"
             style={{ borderColor: 'rgba(243,240,238,0.12)', color: 'rgba(243,240,238,0.40)' }}
           >
-            <p>© {new Date().getFullYear()} LegalDoc. Free &amp; independent.</p>
+            <p>© {new Date().getFullYear()} DukanDoc. Free &amp; independent.</p>
             <p className="inline-flex items-center gap-1.5">
               <span>Made in India</span>
               <img src="/ind.svg" alt="India" className="w-3.5 h-2.5 object-cover rounded-[1px] inline-block" />

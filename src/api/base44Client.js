@@ -2,17 +2,21 @@
 // Zero Base44 cloud dependencies — 100% ready for AWS / Vercel / Netlify deployment.
 
 const STORAGE_KEYS = {
-  CHECKLISTS: 'legaldoc_checklists',
-  ITEMS: 'legaldoc_checklist_items',
-  INQUIRIES: 'legaldoc_inquiries',
-  USER: 'legaldoc_current_user',
-  TOKEN: 'legaldoc_auth_token',
+  CHECKLISTS: 'dukandoc_checklists',
+  ITEMS: 'dukandoc_checklist_items',
+  INQUIRIES: 'dukandoc_inquiries',
+  USER: 'dukandoc_current_user',
+  TOKEN: 'dukandoc_auth_token',
 };
 
 // Seed sample data if first time
 function getStored(key, defaultVal) {
   try {
-    const raw = localStorage.getItem(key);
+    let raw = localStorage.getItem(key);
+    if (!raw && key.startsWith('dukandoc_')) {
+      // Backward compatibility for existing browser sessions
+      raw = localStorage.getItem(key.replace('dukandoc_', 'legaldoc_'));
+    }
     return raw ? JSON.parse(raw) : defaultVal;
   } catch {
     return defaultVal;
@@ -426,10 +430,10 @@ export const base44 = {
   app: {
     async getPublicSettings() {
       return {
-        id: 'legaldoc-app',
+        id: 'dukandoc-app',
         public_settings: {
           allow_registration: true,
-          app_name: 'LegalDoc India',
+          app_name: 'DukanDoc India',
         },
       };
     },

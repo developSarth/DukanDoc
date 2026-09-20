@@ -349,44 +349,6 @@ export default function Checklist() {
         +
       </div>
 
-      {/* Flanking Architectural Badges in Desktop Margins (xl & up) */}
-      <div className="hidden xl:flex fixed left-6 2xl:left-10 top-36 flex-col gap-6 select-none pointer-events-none opacity-40 z-0">
-        <div className="flex items-center gap-2 text-[10px] tracking-widest uppercase font-mono text-[#004043]">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#004043]" />
-          <span>GOVT VERIFIED ENGINE</span>
-        </div>
-        <div className="space-y-4 pl-1 text-[11px] font-mono text-[#004043]/70">
-          <div className="flex items-center gap-2">
-            <span className="w-1 h-1 rounded-full bg-[#004043]/40" />
-            <span>FOSCOS // FSSAI</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="w-1 h-1 rounded-full bg-[#004043]/40" />
-            <span>GST COMMON PORTAL</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="w-1 h-1 rounded-full bg-[#004043]/40" />
-            <span>MAHAGST // P-TAX</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="w-1 h-1 rounded-full bg-[#004043]/40" />
-            <span>MCGM // CITIZEN PORTAL</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="hidden xl:flex fixed right-6 2xl:right-10 top-36 flex-col items-end gap-6 select-none pointer-events-none opacity-40 z-0 text-right">
-        <div className="flex items-center gap-2 text-[10px] tracking-widest uppercase font-mono text-[#004043]">
-          <span>STATUS // ONLINE</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-[#27EAA6] animate-pulse" />
-        </div>
-        <div className="space-y-4 pr-1 text-[11px] font-mono text-[#004043]/70">
-          <div>LAT 19.0760° N</div>
-          <div>LNG 72.8777° E</div>
-          <div>REGION: IN-MH</div>
-          <div>COMPLIANCE ID: 2026</div>
-        </div>
-      </div>
 
       {/* ── Top Bar & Actions ─────────────────────────────────── */}
       <div className="border-b" style={{ borderColor: 'rgba(0,64,67,0.08)' }}>
@@ -453,7 +415,7 @@ export default function Checklist() {
 
             <div className="text-right flex items-baseline gap-1.5">
               <span className="text-2xl sm:text-3xl font-heading font-bold" style={{ color: 'var(--ink)' }}>
-                {rollingPercent}%!
+                {rollingPercent}%
               </span>
               <span className="text-xs sm:text-[13.5px] font-medium text-slate-500">complete</span>
             </div>

@@ -313,7 +313,7 @@ Structure your markdown strictly as follows:
 # ==========================================
 # 3. FastAPI Server Setup
 # ==========================================
-app = FastAPI(title="LegalDoc AI Backend", version="1.0.0")
+app = FastAPI(title="DukanDoc AI Backend", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -531,5 +531,5 @@ if __name__ == "__main__":
         sys.stdout.reconfigure(encoding='utf-8')
     except Exception:
         pass
-    print("\nStarting LegalDoc AI Server on http://127.0.0.1:8000 ...")
+    print("\nStarting DukanDoc AI Server on http://127.0.0.1:8000 ...")
     uvicorn.run(app, host="127.0.0.1", port=8000)

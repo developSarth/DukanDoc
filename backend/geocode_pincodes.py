@@ -53,7 +53,7 @@ def geocode_pincode(pincode, retries=2):
     Returns (lat, lon) or None on failure.
     """
     url = "https://nominatim.openstreetmap.org/search"
-    headers = {"User-Agent": "LegalDoc-Hackathon-App/1.0 (educational project)"}
+    headers = {"User-Agent": "DukanDoc-App/1.0 (educational project)"}
     params = {
         "postalcode": pincode,
         "country": "India",

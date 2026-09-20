@@ -62,7 +62,7 @@ export default async function(req) {
       return Response.json({ error: 'Business type and location are required.' }, { status: 400 });
     }
 
-    const prompt = `You are LegalDoc, an expert compliance advisor for starting businesses in India.
+    const prompt = `You are DukanDoc, an expert compliance advisor for starting businesses in India.
 
 A user is starting this business:
 - Business type: ${businessType}

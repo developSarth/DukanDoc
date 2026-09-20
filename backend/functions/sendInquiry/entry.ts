@@ -36,7 +36,7 @@ export default async function(req) {
 
     const text = `Hi ${professionalName},
 
-You have received a new business inquiry through LegalDoc, a free business setup guide for entrepreneurs in India.
+You have received a new business inquiry through DukanDoc, a free business setup guide for entrepreneurs in India.
 
 Requirement: ${requirementName}
 
@@ -46,21 +46,21 @@ ${message}
 Please reply directly to the entrepreneur at ${userEmail}.
 
 ---
-This inquiry was sent via LegalDoc. The entrepreneur found your listing through public sources. LegalDoc is not involved in any transaction between you.`;
+This inquiry was sent via DukanDoc. The entrepreneur found your listing through public sources. DukanDoc is not involved in any transaction between you.`;
 
     const html = `<div style="font-family: Arial, sans-serif; color: #222; max-width: 560px;">
       <p>Hi ${escapeHtml(professionalName)},</p>
-      <p>You have received a new business inquiry through <strong>LegalDoc</strong>, a free business setup guide for entrepreneurs in India.</p>
+      <p>You have received a new business inquiry through <strong>DukanDoc</strong>, a free business setup guide for entrepreneurs in India.</p>
       <p><strong>Requirement:</strong> ${escapeHtml(requirementName)}</p>
       <blockquote style="border-left: 3px solid #ddd; margin: 12px 0; padding: 8px 12px; background: #f9f9f9;">${escapeHtml(message)}</blockquote>
       <p>Please reply directly to the entrepreneur at <strong>${escapeHtml(userEmail)}</strong>.</p>
-      <p style="color: #888; font-size: 12px; margin-top: 24px;">This inquiry was sent via LegalDoc. The entrepreneur found your listing through public sources. LegalDoc is not involved in any transaction between you.</p>
+      <p style="color: #888; font-size: 12px; margin-top: 24px;">This inquiry was sent via DukanDoc. The entrepreneur found your listing through public sources. DukanDoc is not involved in any transaction between you.</p>
     </div>`;
 
     await base44.asServiceRole.integrations.Core.SendEmail({
       to,
-      subject: `New business inquiry via LegalDoc — ${requirementName}`,
-      from_name: 'LegalDoc',
+      subject: `New business inquiry via DukanDoc — ${requirementName}`,
+      from_name: 'DukanDoc',
       html,
       text
     });

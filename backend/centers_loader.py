@@ -92,7 +92,7 @@ def geocode_location(location_query: str):
     # 2. Fall back to Nominatim (free, 1 request, no API key)
     try:
         url = "https://nominatim.openstreetmap.org/search"
-        headers = {"User-Agent": "LegalDoc-Hackathon-App/1.0 (educational project)"}
+        headers = {"User-Agent": "DukanDoc-App/1.0 (educational project)"}
         # Add ", India" if not already present for better accuracy
         search_q = q if "india" in q.lower() else f"{q}, India"
         params = {"q": search_q, "format": "json", "limit": 1}

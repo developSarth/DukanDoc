@@ -91,22 +91,7 @@ export default function Home() {
       >
         <div className="max-w-5xl mx-auto px-6 relative z-10">
           <div className="text-center animate-fade-up">
-            {/* Eyebrow - Made in India with SVG flag */}
-            <div className="inline-flex items-center justify-center w-full mb-4">
-              <span
-                className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/85 backdrop-blur-sm border border-[rgba(0,64,67,0.10)] shadow-2xs text-xs font-semibold tracking-wide"
-                style={{ color: 'var(--slate)' }}
-              >
-                <span>Made in India</span>
-                <img
-                  src="/ind.svg"
-                  alt="Flag of India"
-                  className="w-4.5 h-3 object-cover rounded-[2px] shadow-xs inline-block border border-black/5"
-                />
-              </span>
-            </div>
-
-            {/* Headline - Capital B in Business, colored Legally */}
+            {/* Headline - Capital B in Business, colored Legally without bold */}
             <h1
               className="font-serif font-normal text-4xl sm:text-6xl md:text-[66px] mb-4 max-w-4xl mx-auto"
               style={{
@@ -118,8 +103,8 @@ export default function Home() {
               Everything you need to start<br className="hidden sm:inline" /> your Business{' '}
               <span
                 style={{
-                  color: '#0d7a5f',
-                  fontWeight: 600,
+                  color: '#246B56',
+                  fontWeight: 400,
                 }}
               >
                 Legally
@@ -220,7 +205,7 @@ export default function Home() {
               {
                 Icon: Gift,
                 title: 'Completely free',
-                desc: 'No subscription, no paywall. LegalDoc exists to democratize access to legal information.',
+                desc: 'No subscription, no paywall. DukanDoc exists to democratize access to legal information.',
               },
             ].map((item, i) => (
               <div
@@ -266,6 +251,26 @@ export default function Home() {
         />
 
         <div className="max-w-5xl mx-auto px-6 relative z-10">
+          {/* Made in India liquid glass pill matching IntakeWizard opacity */}
+          <div className="mb-4">
+            <span
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide border border-white/85 shadow-sm"
+              style={{
+                background: 'rgba(255, 255, 255, 0.55)',
+                color: 'var(--slate)',
+                backdropFilter: 'blur(28px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(28px) saturate(180%)',
+                boxShadow: '0 4px 14px rgba(0, 40, 43, 0.05), inset 0 1px 1.5px rgba(255, 255, 255, 0.95)',
+              }}
+            >
+              <span>Made in India</span>
+              <img
+                src="/ind.svg"
+                alt="Flag of India"
+                className="w-4.5 h-3 object-cover rounded-[2px] shadow-2xs inline-block"
+              />
+            </span>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center mt-3">
             {/* Left Column */}
