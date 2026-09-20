@@ -25,31 +25,50 @@ if (-not (Test-Path "remote_setup.sh")) {
     exit 1
 }
 
-# 2. Fix permissions on private key
+# 2. Fix Windows permissions on private key
 Write-Host "`n[1/4] Securing permissions on $KEY_FILE..." -ForegroundColor Yellow
-icacls.exe $KEY_FILE /inheritance:r | Out-Null
-icacls.exe $KEY_FILE /grant:r "$($env:USERNAME):(R)" | Out-Null
-Write-Host "  -> Permissions secured." -ForegroundColor Green
+icacls.exe $KEY_FILE /inheritance:r 2>$null | Out-Null
+icacls.exe $KEY_FILE /grant:r "$($env:USERNAME):(R)" 2>$null | Out-Null
+icacls.exe $KEY_FILE /remove:g "NT AUTHORITY\Authenticated Users" 2>$null | Out-Null
+icacls.exe $KEY_FILE /remove:g "*S-1-5-11" 2>$null | Out-Null
+icacls.exe $KEY_FILE /remove:g "BUILTIN\Users" 2>$null | Out-Null
+icacls.exe $KEY_FILE /remove:g "Everyone" 2>$null | Out-Null
+Write-Host "  -> Permissions secured successfully." -ForegroundColor Green
 
 # 3. Upload .env directly to EC2
 Write-Host "`n[2/4] Uploading .env secrets to EC2 server..." -ForegroundColor Yellow
 scp -o StrictHostKeyChecking=no -i $KEY_FILE .env "${USER}@${EC2_IP}:/home/ubuntu/.env"
+$exitCode = $LASTEXITCODE
+if ($exitCode -ne 0) {
+    Write-Error "Failed to upload .env to server."
+    exit 1
+}
 Write-Host "  -> .env uploaded." -ForegroundColor Green
 
 # 4. Upload remote setup bash script
 Write-Host "`n[3/4] Uploading automated setup script to EC2..." -ForegroundColor Yellow
-# Convert Windows CRLF to Linux LF for the bash script before upload
 $content = Get-Content "remote_setup.sh" -Raw
 $content = $content -replace "`r`n", "`n"
-[System.IO.File]::WriteAllText("$PSScriptRoot/remote_setup_unix.sh", $content, [System.Text.UTF8Encoding]::new($false))
-scp -o StrictHostKeyChecking=no -i $KEY_FILE "$PSScriptRoot/remote_setup_unix.sh" "${USER}@${EC2_IP}:/home/ubuntu/remote_setup.sh"
-Remove-Item "$PSScriptRoot/remote_setup_unix.sh" -Force -ErrorAction SilentlyContinue
+$tempScript = "$PSScriptRoot/remote_setup_unix.sh"
+[System.IO.File]::WriteAllText($tempScript, $content, [System.Text.UTF8Encoding]::new($false))
+scp -o StrictHostKeyChecking=no -i $KEY_FILE $tempScript "${USER}@${EC2_IP}:/home/ubuntu/remote_setup.sh"
+$exitCode = $LASTEXITCODE
+Remove-Item $tempScript -Force -ErrorAction SilentlyContinue
+if ($exitCode -ne 0) {
+    Write-Error "Failed to upload remote setup script."
+    exit 1
+}
 Write-Host "  -> Setup script uploaded." -ForegroundColor Green
 
 # 5. Run setup script on EC2
 Write-Host "`n[4/4] Running automated setup on EC2 (installing Python, Node, Nginx, building app)..." -ForegroundColor Yellow
 Write-Host "  -> This takes about 1-2 minutes. Please wait..." -ForegroundColor Gray
-ssh -o StrictHostKeyChecking=no -i $KEY_FILE "${USER}@${EC2_IP}" "chmod +x /home/ubuntu/remote_setup.sh && /home/ubuntu/remote_setup.sh"
+ssh -n -o StrictHostKeyChecking=no -i $KEY_FILE "${USER}@${EC2_IP}" "chmod +x /home/ubuntu/remote_setup.sh && /home/ubuntu/remote_setup.sh"
+$exitCode = $LASTEXITCODE
+if ($exitCode -ne 0) {
+    Write-Error "Remote setup encountered an error."
+    exit 1
+}
 
 Write-Host "`n==========================================================" -ForegroundColor Green
 Write-Host " DEPLOYMENT COMPLETE!" -ForegroundColor Green

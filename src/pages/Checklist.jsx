@@ -167,6 +167,22 @@ function useRollingTicker(target, duration = 850) {
   return count;
 }
 
+function cleanExecutiveSummary(text) {
+  if (!text) return '';
+  // If legacy profile_summary contains Section 2 (Per-License Breakdown), strip it out
+  if (text.includes('## 2. Mandatory Clearances') || text.includes('## 2.') || text.includes('### [')) {
+    const sections = text.split(/(?=## [1-4]\.)/);
+    const filtered = sections.filter((s) => !s.trim().startsWith('## 2.'));
+    let cleaned = filtered.join('\n\n').trim();
+    cleaned = cleaned
+      .replace(/-\s*\*\*Video Tutorial Walkthrough[\s\S]*?(?=\n-|\n#|\n\n|$)/gi, '')
+      .replace(/-\s*\*\*Recommended Local Assistance[\s\S]*?(?=\n-|\n#|\n\n|$)/gi, '')
+      .replace(/-\s*\*\*Cheapest & Fastest[\s\S]*?(?=\n-|\n#|\n\n|$)/gi, '');
+    return cleaned.trim();
+  }
+  return text;
+}
+
 export default function Checklist() {
   const { id } = useParams();
   const [checklist, setChecklist] = useState(null);
@@ -348,10 +364,10 @@ export default function Checklist() {
                   </div>
                   <div>
                     <h3 className="text-sm sm:text-base font-semibold" style={{ color: 'var(--ink)' }}>
-                      Executive Legal &amp; Compliance Roadmap
+                      Executive Compliance Overview
                     </h3>
                     <p className="text-xs text-muted-foreground">
-                      Authoritative regulatory briefing grounded in live Maharashtra statutory data
+                      High-level regulatory posture and execution phases (click View Details below for individual document guides)
                     </p>
                   </div>
                 </div>
@@ -368,7 +384,7 @@ export default function Checklist() {
                     </>
                   ) : (
                     <>
-                      <span>Read Roadmap</span>
+                      <span>Read Overview</span>
                       <ChevronDown className="h-3.5 w-3.5" />
                     </>
                   )}
@@ -376,8 +392,8 @@ export default function Checklist() {
               </div>
 
               {showBriefing && (
-                <div className="mt-4 pt-1">
-                  <MarkdownRenderer content={clData.profile_summary} />
+                <div className="mt-4 pt-1 text-sm leading-relaxed">
+                  <MarkdownRenderer content={cleanExecutiveSummary(clData.profile_summary)} />
                 </div>
               )}
             </div>

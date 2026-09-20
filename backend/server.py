@@ -281,54 +281,32 @@ def build_report(business_type: str, city: str):
     if not enriched and documents:
         enriched = [{**d, "nearby_agents": [], "web_guides": [], "youtube_guides": [], "nearest_official_center": top_kiosk} for d in documents]
 
-    print("[FinalAgent] Step 4: Formatting final grounded report with LLM...")
-    format_prompt = f"""You are formatting an authoritative, data-driven Business Licensing and Statutory Compliance Briefing for an entrepreneur launching a "{business_type}" in {city}, Maharashtra.
+    print("[FinalAgent] Step 4: Formatting concise executive summary with LLM...")
+    kiosk_snippet = ""
+    if top_kiosk:
+        kiosk_snippet = f"- **Nearest Official Support Center**: {top_kiosk.get('name')} ({top_kiosk.get('location')}) — {top_kiosk.get('rating')} away. For biometric scanning and physical paperwork submission."
 
-Here is the LIVE, REAL-TIME statutory research data (including live Google Maps local licensing consultants, real YouTube application video tutorials, official government web portals, and nearest Aaple Sarkar / CSC government kiosks) as JSON:
-
-{pyjson.dumps(enriched, indent=2)}
-
-Generate a clean, highly actionable, beautifully styled Markdown report adhering strictly to this structure:
-
-# Executive Regulatory & Licensing Roadmap: {business_type} ({city})
-
-## 1. Statutory Executive Overview
-Summarize the legal framework for opening a {business_type} in {city}, highlighting key municipal, state, and central statutory bodies and immediate compliance priorities.
-
-## 2. Mandatory Clearances & Registrations (Per-License Breakdown)
-For EVERY single license/registration in the verified data above, create a dedicated subsection formatted exactly as follows:
-
-### [License Name]
-- **Issuing Statutory Body**: [issuing_authority]
-- **Statutory Purpose & Penalty**: [why_needed] and statutory risks of non-compliance.
-- **Official Government Fee**: [typical_cost]
-- **Direct Official Portal**: [official_website link]
-- **Cheapest & Fastest Self-Application Route**: How the entrepreneur can apply directly online without paying middlemen or agents.
-- **Recommended Local Assistance (Google Places / Maps Fallback)**:
-  List 1–2 real consultants found in the data (Name, Address, Star Rating) as a paid backup if they want professional help. (If none in data, state "Direct official portal recommended").
-- **Video Tutorial Walkthrough (YouTube)**:
-  Provide the real YouTube video tutorial from the data with its title and link: [Watch Tutorial: Video Title](YouTube URL).
-- **Mandatory Documents Checklist**: Bullet list of key required documents.
-
-## 3. Nearest Official Government Assistance Center (Aaple Sarkar / CSC Kiosk)
-Highlight the physical government center discovered near {city} from our official Maharashtra database:
-- **Center Name**: [Name]
-- **Location**: [Full Address]
-- **Calculated Distance**: [Distance in km]
-- **Official Helpdesk / Phone**: [Contact Phone]
-Explain that the entrepreneur can visit this center for in-person biometric verification, document scanning, and government certificate issuance.
-
-## 4. Phase-by-Phase Strategic Execution Roadmap
-- **Phase 1 (Days 1–5): Foundation & Digital Identity** (Entity, PAN, Aadhaar, Bank Account, Udyam MSME)
-- **Phase 2 (Days 5–15): Premises & Municipal Clearances** (Shop & Establishment / Gumasta, Local Trade License)
-- **Phase 3 (Days 15–30): Operational Accreditations & Final Launch** (FSSAI / Fire NOC / GST / Professional Tax)
+    format_prompt = f"""You are writing a concise Executive Compliance Summary for an entrepreneur launching a "{business_type}" in {city}, Maharashtra.
 
 CRITICAL INSTRUCTIONS:
-- You MUST explicitly cite the real consultant names, ratings, addresses, real YouTube video titles and links, and Aaple Sarkar center found in the data.
-- NEVER invent fictitious consultants or fake YouTube links. Use ONLY the data provided.
-- Ensure clean Markdown syntax: bold (**), italics (*), bullet lists, and clickable links.
+- Keep the response MINIMAL, REFINED, and strictly high-level (100 to 150 words total).
+- DO NOT list individual licenses or repeat per-document breakdowns.
+- DO NOT include license fees, required document lists, direct official portal links, YouTube video tutorials, or consultant listings. All of these granular details are already displayed inside each document's dedicated "View Details" section.
+- Focus ONLY on high-level context exclusive to the overall business compliance posture.
+
+Structure your markdown strictly as follows:
+
+### Regulatory Overview
+2-3 concise sentences summarizing the regulatory framework, municipal jurisdiction, and compliance posture for this business in {city}.
+
+### Phased Execution Sequence
+- **Phase 1 (Days 1–5)**: Entity identity, PAN, and foundational registrations.
+- **Phase 2 (Days 5–15)**: Premises establishment and local municipal clearances.
+- **Phase 3 (Days 15–30)**: Operational accreditations, sector permits, and tax compliance.
+
+{f"### In-Person Government Support\n{kiosk_snippet}" if kiosk_snippet else ""}
 """
-    final_report = ask_llm(format_prompt, max_tokens=3000)
+    final_report = ask_llm(format_prompt, max_tokens=450)
     return final_report, enriched
 
 
