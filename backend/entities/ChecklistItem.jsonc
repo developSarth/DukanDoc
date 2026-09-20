@@ -1,0 +1,120 @@
+{
+  "name": "ChecklistItem",
+  "type": "object",
+  "properties": {
+    "checklist_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "why_required": {
+      "type": "string"
+    },
+    "portal_name": {
+      "type": "string"
+    },
+    "portal_url": {
+      "type": "string"
+    },
+    "official_fees": {
+      "type": "string"
+    },
+    "required_documents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "process_and_timeline": {
+      "type": "string"
+    },
+    "can_apply_self": {
+      "type": "boolean"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "moderate",
+        "complex"
+      ]
+    },
+    "is_official": {
+      "type": "boolean"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "todo",
+        "in_progress",
+        "done"
+      ],
+      "default": "todo"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "order_index": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "checklist_id",
+    "name"
+  ],
+  "rls": {
+    "read": {
+      "$or": [
+        {
+          "created_by_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "create": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "$or": [
+        {
+          "created_by_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "delete": {
+      "$or": [
+        {
+          "created_by_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "name": "Inquiry",
+  "type": "object",
+  "properties": {
+    "checklist_item_id": {
+      "type": "string"
+    },
+    "requirement_name": {
+      "type": "string"
+    },
+    "professional_name": {
+      "type": "string"
+    },
+    "professional_type": {
+      "type": "string"
+    },
+    "contact_email": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "string"
+    },
+    "pricing": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "sent",
+        "replied"
+      ],
+      "default": "sent"
+    }
+  },
+  "required": [
+    "professional_name",
+    "contact_email",
+    "message"
+  ],
+  "rls": {
+    "read": {
+      "$or": [
+        {
+          "created_by_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "create": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "$or": [
+        {
+          "created_by_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "delete": {
+      "$or": [
+        {
+          "created_by_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    }
+  }
+}

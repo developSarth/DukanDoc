@@ -1,0 +1,1727 @@
+{
+  "400001": {
+    "lat": 18.9916242,
+    "lon": 72.853977,
+    "display": "400001, F/S Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, India"
+  },
+  "400002": {
+    "lat": 18.9536307,
+    "lon": 72.8327114,
+    "display": "400002, B Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, India"
+  },
+  "400003": {
+    "lat": 18.9556582,
+    "lon": 72.8329054,
+    "display": "400003, B Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, India"
+  },
+  "400004": {
+    "lat": 18.9610482,
+    "lon": 72.8248762,
+    "display": "400004, D Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, India"
+  },
+  "400005": {
+    "lat": 18.9123298,
+    "lon": 72.8181285,
+    "display": "400005, A Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, India"
+  },
+  "400007": {
+    "lat": 19.0305205,
+    "lon": 73.0117427,
+    "display": "400007, Navi Mumbai, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "400008": {
+    "lat": 18.9486065,
+    "lon": 72.8526408,
+    "display": "400008, India"
+  },
+  "400009": {
+    "lat": 18.9590105,
+    "lon": 72.8376679,
+    "display": "400009, B Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, India"
+  },
+  "400010": {
+    "lat": 19.0770997,
+    "lon": 73.1240014,
+    "display": "400010, Panvel, Panvel Subdistrict, Raigad, Maharashtra, India"
+  },
+  "400011": {
+    "lat": 18.9913612,
+    "lon": 72.8412268,
+    "display": "400011, F/S Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, India"
+  },
+  "400012": {
+    "lat": 19.0589914,
+    "lon": 72.9005947,
+    "display": "400012, M/W Ward, Mumbai Zone 5, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400013": {
+    "lat": 19.0069479,
+    "lon": 72.8278958,
+    "display": "400013, G/S Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, India"
+  },
+  "400014": {
+    "lat": 19.0179483,
+    "lon": 72.8495814,
+    "display": "400014, F/N Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, India"
+  },
+  "400015": {
+    "lat": 19.0004577,
+    "lon": 72.8517855,
+    "display": "400015, F/S Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, India"
+  },
+  "400018": {
+    "lat": 19.0014088,
+    "lon": 72.8198406,
+    "display": "400018, G/S Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, India"
+  },
+  "400022": {
+    "lat": 19.0416405,
+    "lon": 72.8649937,
+    "display": "400022, F/N Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, India"
+  },
+  "400023": {
+    "lat": 18.9278198,
+    "lon": 72.8253161,
+    "display": "400023, A Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, India"
+  },
+  "400024": {
+    "lat": 19.0620464,
+    "lon": 72.8819126,
+    "display": "400024, L Ward, Mumbai Zone 5, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400025": {
+    "lat": 19.0153744,
+    "lon": 72.8288434,
+    "display": "400025, G/S Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, India"
+  },
+  "400027": {
+    "lat": 18.9822836,
+    "lon": 72.8413534,
+    "display": "400027, E Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, India"
+  },
+  "400029": {
+    "lat": 19.1273195,
+    "lon": 72.8595228,
+    "display": "400029, K/E Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400030": {
+    "lat": 19.0080545,
+    "lon": 72.8187693,
+    "display": "400030, G/S Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, India"
+  },
+  "400031": {
+    "lat": 19.0169199,
+    "lon": 72.8560584,
+    "display": "400031, F/N Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, India"
+  },
+  "400033": {
+    "lat": 18.9920508,
+    "lon": 72.8450275,
+    "display": "400033, F/S Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, India"
+  },
+  "400034": {
+    "lat": 19.0286919,
+    "lon": 72.9730608,
+    "display": "400034, India"
+  },
+  "400036": {
+    "lat": 18.9628138,
+    "lon": 72.8057764,
+    "display": "400036, D Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, India"
+  },
+  "400037": {
+    "lat": 19.0265315,
+    "lon": 72.8691228,
+    "display": "400037, F/N Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, India"
+  },
+  "400042": {
+    "lat": 19.1344883,
+    "lon": 72.9369844,
+    "display": "400042, S Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400043": {
+    "lat": 19.0633061,
+    "lon": 72.9209891,
+    "display": "400043, M/E Ward, Mumbai Zone 5, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400049": {
+    "lat": 19.1769009,
+    "lon": 72.8158154,
+    "display": "400049, P/N Ward, Mumbai Zone 4, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400050": {
+    "lat": 19.0573517,
+    "lon": 72.8297188,
+    "display": "400050, Bandra West, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtr"
+  },
+  "400051": {
+    "lat": 19.0503833,
+    "lon": 72.8621497,
+    "display": "400051, Dharavi, Mumbai Zone 2, Mumbai City District, Maharashtra, India"
+  },
+  "400052": {
+    "lat": 19.0740364,
+    "lon": 72.8316462,
+    "display": "400052, H/W Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400053": {
+    "lat": 19.1386177,
+    "lon": 72.8289642,
+    "display": "400053, K/W Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400054": {
+    "lat": 19.083011,
+    "lon": 72.8370218,
+    "display": "400054, H/W Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400055": {
+    "lat": 19.0809343,
+    "lon": 72.8485758,
+    "display": "400055, H/E Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400056": {
+    "lat": 19.0613462,
+    "lon": 72.9821055,
+    "display": "400056, India"
+  },
+  "400057": {
+    "lat": 19.1028711,
+    "lon": 72.8497796,
+    "display": "400057, K/E Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400058": {
+    "lat": 19.1247634,
+    "lon": 72.8380777,
+    "display": "400058, K/W Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400059": {
+    "lat": 19.1153501,
+    "lon": 72.9236597,
+    "display": "400059, S Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400060": {
+    "lat": 19.1362077,
+    "lon": 72.85635,
+    "display": "400060, K/E Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400061": {
+    "lat": 19.1344885,
+    "lon": 72.8142949,
+    "display": "400061, K/W Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400063": {
+    "lat": 19.1691655,
+    "lon": 72.8617937,
+    "display": "400063, P/S Ward, Mumbai Zone 4, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400064": {
+    "lat": 19.1887492,
+    "lon": 72.8400932,
+    "display": "400064, P/N Ward, Mumbai Zone 4, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400065": {
+    "lat": 19.1609455,
+    "lon": 72.8940152,
+    "display": "400065, T Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400066": {
+    "lat": 19.227921,
+    "lon": 72.8627279,
+    "display": "400066, R/C Ward, Mumbai Zone 4, Mumbai Suburban District, Maharashtra, India"
+  },
+  "400067": {
+    "lat": 19.207277,
+    "lon": 72.8386749,
+    "display": "400067, R/S Ward, Mumbai Zone 4, Mumbai Suburban District, Maharashtra, India"
+  },
+  "400068": {
+    "lat": 19.2503813,
+    "lon": 72.8620331,
+    "display": "400068, R/N Ward, Mumbai Zone 4, Mumbai Suburban District, Maharashtra, India"
+  },
+  "400069": {
+    "lat": 19.1212706,
+    "lon": 72.852718,
+    "display": "400069, K/E Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400070": {
+    "lat": 19.0787127,
+    "lon": 72.8829356,
+    "display": "400070, L Ward, Mumbai Zone 5, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400071": {
+    "lat": 19.1005547,
+    "lon": 72.904609,
+    "display": "400071, N Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400072": {
+    "lat": 19.1062045,
+    "lon": 72.8913447,
+    "display": "400072, L Ward, Mumbai Zone 5, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400074": {
+    "lat": 19.0347901,
+    "lon": 72.8930723,
+    "display": "400074, M/W Ward, Mumbai Zone 5, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400075": {
+    "lat": 19.0860689,
+    "lon": 72.9134264,
+    "display": "400075, N Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400076": {
+    "lat": 19.1235762,
+    "lon": 72.9120539,
+    "display": "400076, S Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400077": {
+    "lat": 19.0801431,
+    "lon": 72.906725,
+    "display": "400077, N Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400078": {
+    "lat": 19.1491975,
+    "lon": 72.9361931,
+    "display": "400078, S Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400079": {
+    "lat": 19.1066121,
+    "lon": 72.9206757,
+    "display": "400079, S Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400080": {
+    "lat": 19.1754306,
+    "lon": 72.9513392,
+    "display": "400080, T Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400081": {
+    "lat": 19.171808,
+    "lon": 72.9620087,
+    "display": "400081, T Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400082": {
+    "lat": 19.1730204,
+    "lon": 72.9351203,
+    "display": "400082, T Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400083": {
+    "lat": 19.1149992,
+    "lon": 72.932116,
+    "display": "400083, S Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400084": {
+    "lat": 19.1088869,
+    "lon": 72.9145675,
+    "display": "400084, N Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400086": {
+    "lat": 19.0874804,
+    "lon": 72.9033848,
+    "display": "400086, N Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400087": {
+    "lat": 19.1347759,
+    "lon": 72.9015476,
+    "display": "400087, S Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, In"
+  },
+  "400088": {
+    "lat": 19.0458703,
+    "lon": 72.920806,
+    "display": "400088, M/E Ward, Mumbai Zone 5, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400089": {
+    "lat": 19.0604157,
+    "lon": 72.8997102,
+    "display": "400089, M/W Ward, Mumbai Zone 5, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400091": {
+    "lat": 19.2311123,
+    "lon": 72.8388777,
+    "display": "400091, R/C Ward, Mumbai Zone 4, Mumbai Suburban District, Maharashtra, India"
+  },
+  "400092": {
+    "lat": 19.2410107,
+    "lon": 72.8471228,
+    "display": "400092, R/N Ward, Mumbai Zone 4, Mumbai Suburban District, Maharashtra, India"
+  },
+  "400093": {
+    "lat": 19.1267232,
+    "lon": 72.8659492,
+    "display": "400093, K/E Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400095": {
+    "lat": 19.1950733,
+    "lon": 72.8169292,
+    "display": "400095, P/N Ward, Mumbai Zone 4, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400097": {
+    "lat": 19.1825363,
+    "lon": 72.8596229,
+    "display": "400097, P/N Ward, Mumbai Zone 4, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400099": {
+    "lat": 19.1045918,
+    "lon": 72.8632292,
+    "display": "400099, K/E Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400101": {
+    "lat": 19.2055574,
+    "lon": 72.8700803,
+    "display": "400101, R/S Ward, Mumbai Zone 4, Mumbai Suburban District, Maharashtra, India"
+  },
+  "400102": {
+    "lat": 19.1424907,
+    "lon": 72.839115,
+    "display": "400102, K/W Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400103": {
+    "lat": 19.2409206,
+    "lon": 72.8498616,
+    "display": "400103, R/N Ward, Mumbai Zone 4, Mumbai Suburban District, Maharashtra, India"
+  },
+  "400104": {
+    "lat": 19.1590018,
+    "lon": 72.8422769,
+    "display": "400104, P/S Ward, Mumbai Zone 4, Mumbai, Mumbai Suburban District, Maharashtra, "
+  },
+  "400601": {
+    "lat": 19.2053452,
+    "lon": 72.9754379,
+    "display": "400601, Thane, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "400602": {
+    "lat": 19.1951027,
+    "lon": 72.9683033,
+    "display": "400602, Thane, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "400603": {
+    "lat": 19.1927301,
+    "lon": 72.9891214,
+    "display": "400603, Thane, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "400604": {
+    "lat": 19.1918702,
+    "lon": 72.9545881,
+    "display": "400604, Thane, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "400605": {
+    "lat": 19.2023726,
+    "lon": 73.002995,
+    "display": "400605, Thane, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "400606": {
+    "lat": 19.2073144,
+    "lon": 72.9649136,
+    "display": "400606, Thane, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "400607": {
+    "lat": 19.244484,
+    "lon": 72.9962978,
+    "display": "400607, Thane, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "400610": {
+    "lat": 19.2387032,
+    "lon": 72.9692853,
+    "display": "400610, Thane, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "400612": {
+    "lat": 19.1901871,
+    "lon": 73.042719,
+    "display": "400612, Dombivali, Kalyan Subdistrict, Thane, Maharashtra, India"
+  },
+  "400614": {
+    "lat": 19.0273801,
+    "lon": 73.0356468,
+    "display": "400614, Navi Mumbai, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "400615": {
+    "lat": 19.2650415,
+    "lon": 72.966354,
+    "display": "400615, Thane, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "400701": {
+    "lat": 19.1208687,
+    "lon": 73.0047011,
+    "display": "400701, Navi Mumbai, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "400703": {
+    "lat": 19.0763822,
+    "lon": 73.0044568,
+    "display": "400703, Navi Mumbai, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "400705": {
+    "lat": 19.0672674,
+    "lon": 73.0091731,
+    "display": "400705, Navi Mumbai, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "400706": {
+    "lat": 19.0197339,
+    "lon": 73.0215921,
+    "display": "400706, Navi Mumbai, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "400708": {
+    "lat": 19.1697874,
+    "lon": 73.0046132,
+    "display": "400708, Navi Mumbai, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "400709": {
+    "lat": 19.1016265,
+    "lon": 73.0051248,
+    "display": "400709, Navi Mumbai, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "400710": {
+    "lat": 19.1084751,
+    "lon": 73.0207739,
+    "display": "400710, Navi Mumbai, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "401101": {
+    "lat": 19.2964613,
+    "lon": 72.8535096,
+    "display": "401101, Mira-Bhayander, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "401102": {
+    "lat": 19.5575971,
+    "lon": 72.8199908,
+    "display": "401102, Palghar Subdistrict, Palghar, Maharashtra, India"
+  },
+  "401105": {
+    "lat": 19.3068795,
+    "lon": 72.8581497,
+    "display": "401105, Mira-Bhayander, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "401106": {
+    "lat": 19.2779619,
+    "lon": 72.7873381,
+    "display": "401106, Mira-Bhayander, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "401107": {
+    "lat": 19.2804504,
+    "lon": 72.8716707,
+    "display": "401107, Mira-Bhayander, Thane Subdistrict, Thane, Maharashtra, India"
+  },
+  "401204": {
+    "lat": 19.4972833,
+    "lon": 73.0307436,
+    "display": "401204, Wada Subdistrict, Palghar, Maharashtra, India"
+  },
+  "401206": {
+    "lat": 19.0049447,
+    "lon": 73.114648,
+    "display": "401206, Panvel, Panvel Subdistrict, Raigad, Maharashtra, India"
+  },
+  "410501": {
+    "lat": 18.7444807,
+    "lon": 73.8255414,
+    "display": "410501, Khed, Pune, Maharashtra, India"
+  },
+  "410505": {
+    "lat": 18.8692943,
+    "lon": 74.0132076,
+    "display": "410505, Khed, Pune, Maharashtra, India"
+  },
+  "410506": {
+    "lat": 18.728467,
+    "lon": 73.6811347,
+    "display": "410506, Mawal Subdistrict, Pune, Maharashtra, India"
+  },
+  "410507": {
+    "lat": 18.7414125,
+    "lon": 73.6775516,
+    "display": "410507, Mawal Subdistrict, Pune, Maharashtra, India"
+  },
+  "410510": {
+    "lat": 18.8920708,
+    "lon": 74.0816595,
+    "display": "410510, Ambegaon, Pune, Maharashtra, India"
+  },
+  "410512": {
+    "lat": 18.9195456,
+    "lon": 73.9392945,
+    "display": "410512, Ambegaon, Pune, Maharashtra, India"
+  },
+  "410513": {
+    "lat": 18.986011,
+    "lon": 73.7711457,
+    "display": "410513, Khed, Pune, Maharashtra, India"
+  },
+  "411001": {
+    "lat": 18.5336203,
+    "lon": 73.8806957,
+    "display": "411001, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411002": {
+    "lat": 18.5244698,
+    "lon": 73.8804855,
+    "display": "411002, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411003": {
+    "lat": 18.5554575,
+    "lon": 73.8444201,
+    "display": "411003, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411004": {
+    "lat": 18.516511,
+    "lon": 73.8360848,
+    "display": "411004, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411005": {
+    "lat": 18.4940303,
+    "lon": 73.8877868,
+    "display": "411005, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411006": {
+    "lat": 18.561513,
+    "lon": 73.9189034,
+    "display": "411006, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411007": {
+    "lat": 18.5592989,
+    "lon": 73.8100971,
+    "display": "411007, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411009": {
+    "lat": 18.4774257,
+    "lon": 73.8508126,
+    "display": "411009, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411011": {
+    "lat": 18.5563921,
+    "lon": 73.9012993,
+    "display": "411011, Ward 6, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411012": {
+    "lat": 18.5831604,
+    "lon": 73.8304239,
+    "display": "411012, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "411013": {
+    "lat": 18.512578,
+    "lon": 73.9200873,
+    "display": "411013, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411014": {
+    "lat": 18.5536731,
+    "lon": 73.9334361,
+    "display": "411014, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411015": {
+    "lat": 18.5926471,
+    "lon": 73.8908996,
+    "display": "411015, Ward 1, Pune, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411016": {
+    "lat": 18.5330511,
+    "lon": 73.83145,
+    "display": "411016, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411017": {
+    "lat": 18.6105017,
+    "lon": 73.7917329,
+    "display": "411017, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "411018": {
+    "lat": 18.5901,
+    "lon": 73.8357805,
+    "display": "411018, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "411019": {
+    "lat": 18.6428964,
+    "lon": 73.7999983,
+    "display": "411019, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "411020": {
+    "lat": 18.5583442,
+    "lon": 73.8380193,
+    "display": "411020, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411021": {
+    "lat": 18.5271105,
+    "lon": 73.7777004,
+    "display": "411021, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411026": {
+    "lat": 18.6387021,
+    "lon": 73.833317,
+    "display": "411026, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "411027": {
+    "lat": 18.5874506,
+    "lon": 73.7951144,
+    "display": "411027, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "411030": {
+    "lat": 18.5078252,
+    "lon": 73.8467021,
+    "display": "411030, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411033": {
+    "lat": 18.6243858,
+    "lon": 73.7729986,
+    "display": "411033, Mulshi Subdistrict, Pune, Maharashtra, India"
+  },
+  "411034": {
+    "lat": 18.6104782,
+    "lon": 73.8194399,
+    "display": "411034, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "411035": {
+    "lat": 18.7071315,
+    "lon": 73.8612041,
+    "display": "411035, Khed, Pune, Maharashtra, India"
+  },
+  "411036": {
+    "lat": 18.5312754,
+    "lon": 73.9379756,
+    "display": "411036, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411037": {
+    "lat": 18.5206267,
+    "lon": 73.8938597,
+    "display": "411037, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411038": {
+    "lat": 18.5069367,
+    "lon": 73.8073895,
+    "display": "411038, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411039": {
+    "lat": 18.6502249,
+    "lon": 73.8740652,
+    "display": "411039, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "411040": {
+    "lat": 18.4914233,
+    "lon": 73.8991404,
+    "display": "411040, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411042": {
+    "lat": 18.4964758,
+    "lon": 73.8272778,
+    "display": "411042, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "411044": {
+    "lat": 18.6559462,
+    "lon": 73.7696861,
+    "display": "411044, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "411057": {
+    "lat": 18.5910421,
+    "lon": 73.7397435,
+    "display": "411057, Mulshi Subdistrict, Pune, Maharashtra, India"
+  },
+  "411061": {
+    "lat": 18.5914601,
+    "lon": 73.8172208,
+    "display": "411061, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "411062": {
+    "lat": 18.6762838,
+    "lon": 73.8157651,
+    "display": "411062, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "412101": {
+    "lat": 18.6610214,
+    "lon": 73.7335156,
+    "display": "412101, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "412105": {
+    "lat": 18.6593599,
+    "lon": 73.8852726,
+    "display": "412105, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "412108": {
+    "lat": 18.550597,
+    "lon": 73.515306,
+    "display": "412108, Mulshi Subdistrict, Pune, Maharashtra, India"
+  },
+  "412109": {
+    "lat": 18.7147369,
+    "lon": 73.7675087,
+    "display": "412109, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "412110": {
+    "lat": 18.6083462,
+    "lon": 73.8405245,
+    "display": "412110, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "412112": {
+    "lat": 18.4060093,
+    "lon": 73.5060457,
+    "display": "412112, Mulshi Subdistrict, Pune, Maharashtra, India"
+  },
+  "412114": {
+    "lat": 18.6847888,
+    "lon": 73.797127,
+    "display": "412114, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "412115": {
+    "lat": 18.5166177,
+    "lon": 73.7281431,
+    "display": "412115, Mulshi Subdistrict, Pune, Maharashtra, India"
+  },
+  "412201": {
+    "lat": 18.4836158,
+    "lon": 74.0270768,
+    "display": "412201, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "412202": {
+    "lat": 18.4858437,
+    "lon": 74.1428656,
+    "display": "412202, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "412206": {
+    "lat": 18.1358157,
+    "lon": 73.8330761,
+    "display": "412206, Bhor, Pune, Maharashtra, India"
+  },
+  "412207": {
+    "lat": 18.5852547,
+    "lon": 73.9841433,
+    "display": "412207, Pune City Subdistrict, Pune, Maharashtra, India"
+  },
+  "412216": {
+    "lat": 18.6306512,
+    "lon": 74.0395829,
+    "display": "412216, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "412307": {
+    "lat": 18.5091331,
+    "lon": 73.9700853,
+    "display": "412307, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "412402": {
+    "lat": 18.9850329,
+    "lon": 73.7462006,
+    "display": "412402, Khed, Pune, Maharashtra, India"
+  },
+  "412403": {
+    "lat": 18.7928617,
+    "lon": 74.0452249,
+    "display": "412403, Shirur, Pune, Maharashtra, India"
+  },
+  "412404": {
+    "lat": 18.9124286,
+    "lon": 73.8002548,
+    "display": "412404, Khed, Pune, Maharashtra, India"
+  },
+  "412801": {
+    "lat": 18.1392279,
+    "lon": 73.9612531,
+    "display": "412801, Khandala, Satara, Maharashtra, India"
+  },
+  "412802": {
+    "lat": 18.0699163,
+    "lon": 74.0065776,
+    "display": "412802, Khandala, Satara, Maharashtra, India"
+  },
+  "412803": {
+    "lat": 17.9533309,
+    "lon": 73.8834492,
+    "display": "412803, Wai, Satara, Maharashtra, India"
+  },
+  "412804": {
+    "lat": 17.9132638,
+    "lon": 73.8962873,
+    "display": "412804, Wai, Satara, Maharashtra, India"
+  },
+  "412805": {
+    "lat": 17.9210409,
+    "lon": 73.7877814,
+    "display": "412805, Mahabaleshwar, Satara, Maharashtra, India"
+  },
+  "412806": {
+    "lat": 17.8589875,
+    "lon": 73.6886652,
+    "display": "412806, Mahabaleshwar, Satara, Maharashtra, India"
+  },
+  "415001": {
+    "lat": 17.6899872,
+    "lon": 74.0193386,
+    "display": "415001, Satara, Maharashtra, India"
+  },
+  "415002": {
+    "lat": 17.679351,
+    "lon": 73.9970773,
+    "display": "415002, Satara, Maharashtra, India"
+  },
+  "415003": {
+    "lat": 17.6830158,
+    "lon": 74.0280163,
+    "display": "415003, Satara, Maharashtra, India"
+  },
+  "415004": {
+    "lat": 17.6525172,
+    "lon": 74.0344791,
+    "display": "415004, Satara, Maharashtra, India"
+  },
+  "415010": {
+    "lat": 17.749707,
+    "lon": 74.158547,
+    "display": "415010, Koregaon, Satara, Maharashtra, India"
+  },
+  "415011": {
+    "lat": 17.8149959,
+    "lon": 74.0912134,
+    "display": "415011, Koregaon, Satara, Maharashtra, India"
+  },
+  "415013": {
+    "lat": 17.6683705,
+    "lon": 73.8412669,
+    "display": "415013, Satara, Maharashtra, India"
+  },
+  "415014": {
+    "lat": 17.4933468,
+    "lon": 73.9661607,
+    "display": "415014, Patan, Satara, Maharashtra, India"
+  },
+  "415015": {
+    "lat": 17.7874768,
+    "lon": 74.0106301,
+    "display": "415015, Satara, Maharashtra, India"
+  },
+  "415020": {
+    "lat": 17.7958889,
+    "lon": 73.9412767,
+    "display": "415020, Jaoli, Satara, Maharashtra, India"
+  },
+  "415021": {
+    "lat": 17.7926826,
+    "lon": 74.1764479,
+    "display": "415021, Koregaon, Satara, Maharashtra, India"
+  },
+  "415022": {
+    "lat": 17.7397121,
+    "lon": 73.9178096,
+    "display": "415022, Satara, Maharashtra, India"
+  },
+  "415023": {
+    "lat": 17.7064142,
+    "lon": 74.4066816,
+    "display": "415023, Khatav, Satara, Maharashtra, India"
+  },
+  "415102": {
+    "lat": 17.4410229,
+    "lon": 74.5482982,
+    "display": "415102, Khatav, Satara, Maharashtra, India"
+  },
+  "415103": {
+    "lat": 17.2233289,
+    "lon": 74.0067683,
+    "display": "415103, Patan, Satara, Maharashtra, India"
+  },
+  "415104": {
+    "lat": 17.194511,
+    "lon": 74.1540546,
+    "display": "415104, Karad, Satara, Maharashtra, India"
+  },
+  "415105": {
+    "lat": 17.3152851,
+    "lon": 74.2215539,
+    "display": "415105, Karad, Satara, Maharashtra, India"
+  },
+  "415106": {
+    "lat": 17.3986363,
+    "lon": 74.1666654,
+    "display": "415106, Karad, Satara, Maharashtra, India"
+  },
+  "415107": {
+    "lat": 17.464939,
+    "lon": 74.1646423,
+    "display": "415107, Karad, Satara, Maharashtra, India"
+  },
+  "415108": {
+    "lat": 17.1956086,
+    "lon": 74.2336375,
+    "display": "415108, Karad, Satara, Maharashtra, India"
+  },
+  "415109": {
+    "lat": 17.4269601,
+    "lon": 74.0962736,
+    "display": "415109, Karad, Satara, Maharashtra, India"
+  },
+  "415110": {
+    "lat": 17.2836777,
+    "lon": 74.1830718,
+    "display": "415110, Karad, Satara, Maharashtra, India"
+  },
+  "415111": {
+    "lat": 17.1491664,
+    "lon": 74.0327121,
+    "display": "415111, Karad, Satara, Maharashtra, India"
+  },
+  "415112": {
+    "lat": 17.2519831,
+    "lon": 73.9359358,
+    "display": "415112, Patan, Satara, Maharashtra, India"
+  },
+  "415114": {
+    "lat": 17.2964198,
+    "lon": 74.1183542,
+    "display": "415114, Karad, Satara, Maharashtra, India"
+  },
+  "415115": {
+    "lat": 18.4064757,
+    "lon": 73.7597368,
+    "display": "415115, Haveli Subdistrict, Pune, Maharashtra, India"
+  },
+  "415116": {
+    "lat": 17.5222326,
+    "lon": 74.1670762,
+    "display": "415116, Koregaon, Satara, Maharashtra, India"
+  },
+  "415124": {
+    "lat": 17.2315265,
+    "lon": 74.2416033,
+    "display": "415124, Karad, Satara, Maharashtra, India"
+  },
+  "415202": {
+    "lat": 17.906218,
+    "lon": 73.3534399,
+    "display": "415202, Mandangad Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415203": {
+    "lat": 17.9672456,
+    "lon": 73.2789994,
+    "display": "415203, Mandangad Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415205": {
+    "lat": 17.3419356,
+    "lon": 74.0070265,
+    "display": "415205, Patan, Satara, Maharashtra, India"
+  },
+  "415206": {
+    "lat": 17.3620062,
+    "lon": 73.8956463,
+    "display": "415206, Patan, Satara, Maharashtra, India"
+  },
+  "415207": {
+    "lat": 17.3766758,
+    "lon": 73.7301701,
+    "display": "415207, Patan, Satara, Maharashtra, India"
+  },
+  "415208": {
+    "lat": 17.9530178,
+    "lon": 73.1672626,
+    "display": "415208, Mandangad Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415312": {
+    "lat": 17.4599874,
+    "lon": 74.6515328,
+    "display": "415312, Khatav, Satara, Maharashtra, India"
+  },
+  "415501": {
+    "lat": 17.709132,
+    "lon": 74.1705956,
+    "display": "415501, Koregaon, Satara, Maharashtra, India"
+  },
+  "415502": {
+    "lat": 17.7083659,
+    "lon": 74.3213286,
+    "display": "415502, Khatav, Satara, Maharashtra, India"
+  },
+  "415503": {
+    "lat": 17.7699621,
+    "lon": 74.3302748,
+    "display": "415503, Khatav, Satara, Maharashtra, India"
+  },
+  "415504": {
+    "lat": 17.8195186,
+    "lon": 74.2894243,
+    "display": "415504, Khatav, Satara, Maharashtra, India"
+  },
+  "415505": {
+    "lat": 17.6621077,
+    "lon": 74.3686838,
+    "display": "415505, Khatav, Satara, Maharashtra, India"
+  },
+  "415506": {
+    "lat": 17.5949044,
+    "lon": 74.4514807,
+    "display": "415506, Khatav, Satara, Maharashtra, India"
+  },
+  "415507": {
+    "lat": 17.5689193,
+    "lon": 74.5211608,
+    "display": "415507, Khatav, Satara, Maharashtra, India"
+  },
+  "415508": {
+    "lat": 17.7799703,
+    "lon": 74.6022087,
+    "display": "415508, Man, Satara, Maharashtra, India"
+  },
+  "415509": {
+    "lat": 17.6297785,
+    "lon": 74.7853702,
+    "display": "415509, Man, Satara, Maharashtra, India"
+  },
+  "415510": {
+    "lat": 17.5364667,
+    "lon": 74.3272975,
+    "display": "415510, Khatav, Satara, Maharashtra, India"
+  },
+  "415511": {
+    "lat": 17.6450781,
+    "lon": 74.1795743,
+    "display": "415511, Koregaon, Satara, Maharashtra, India"
+  },
+  "415512": {
+    "lat": 17.4618646,
+    "lon": 74.316546,
+    "display": "415512, Khatav, Satara, Maharashtra, India"
+  },
+  "415513": {
+    "lat": 17.8456313,
+    "lon": 73.9314332,
+    "display": "415513, Jaoli, Satara, Maharashtra, India"
+  },
+  "415514": {
+    "lat": 17.8522898,
+    "lon": 73.8863225,
+    "display": "415514, Jaoli, Satara, Maharashtra, India"
+  },
+  "415516": {
+    "lat": 17.9432163,
+    "lon": 73.9759442,
+    "display": "415516, Wai, Satara, Maharashtra, India"
+  },
+  "415517": {
+    "lat": 17.9606136,
+    "lon": 73.9835486,
+    "display": "415517, Wai, Satara, Maharashtra, India"
+  },
+  "415518": {
+    "lat": 17.570735,
+    "lon": 74.066395,
+    "display": "415518, Satara, Maharashtra, India"
+  },
+  "415519": {
+    "lat": 17.539227,
+    "lon": 74.0354735,
+    "display": "415519, Satara, Maharashtra, India"
+  },
+  "415520": {
+    "lat": 17.3956874,
+    "lon": 74.0227217,
+    "display": "415520, Patan, Satara, Maharashtra, India"
+  },
+  "415521": {
+    "lat": 18.0436256,
+    "lon": 74.1885698,
+    "display": "415521, Khandala, Satara, Maharashtra, India"
+  },
+  "415524": {
+    "lat": 17.8846033,
+    "lon": 74.1374998,
+    "display": "415524, Koregaon, Satara, Maharashtra, India"
+  },
+  "415526": {
+    "lat": 18.0827723,
+    "lon": 74.0752849,
+    "display": "415526, Khandala, Satara, Maharashtra, India"
+  },
+  "415536": {
+    "lat": 17.983458,
+    "lon": 73.9691844,
+    "display": "415536, Wai, Satara, Maharashtra, India"
+  },
+  "415538": {
+    "lat": 17.4565438,
+    "lon": 74.4645333,
+    "display": "415538, Khatav, Satara, Maharashtra, India"
+  },
+  "415539": {
+    "lat": 17.2505107,
+    "lon": 74.1818725,
+    "display": "415539, Karad, Satara, Maharashtra, India"
+  },
+  "415540": {
+    "lat": 17.6776984,
+    "lon": 74.6139915,
+    "display": "415540, Man, Satara, Maharashtra, India"
+  },
+  "415605": {
+    "lat": 17.4810711,
+    "lon": 73.5032344,
+    "display": "415605, Chiplun Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415608": {
+    "lat": 17.2905316,
+    "lon": 73.4915864,
+    "display": "415608, Burambad, Sangameshwar Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415609": {
+    "lat": 17.267649,
+    "lon": 73.5675973,
+    "display": "415609, Sangameshwar Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415610": {
+    "lat": 17.2060738,
+    "lon": 73.610271,
+    "display": "415610, Sangameshwar Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415611": {
+    "lat": 17.1696759,
+    "lon": 73.5342744,
+    "display": "415611, Sangameshwar Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415612": {
+    "lat": 16.9783765,
+    "lon": 73.3189017,
+    "display": "415612, Ratnagiri Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415613": {
+    "lat": 17.2597957,
+    "lon": 73.274547,
+    "display": "415613, Ratnagiri Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415614": {
+    "lat": 17.29473,
+    "lon": 73.2213517,
+    "display": "415614, Ratnagiri Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415615": {
+    "lat": 17.1554843,
+    "lon": 73.2715264,
+    "display": "415615, Ratnagiri Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415616": {
+    "lat": 16.8775508,
+    "lon": 73.3196561,
+    "display": "415616, Ratnagiri Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415617": {
+    "lat": 17.0906509,
+    "lon": 73.3199743,
+    "display": "415617, Ratnagiri Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415620": {
+    "lat": 17.1644756,
+    "lon": 73.381728,
+    "display": "415620, Ratnagiri Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415621": {
+    "lat": 17.7200915,
+    "lon": 73.4078878,
+    "display": "415621, Khed Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415634": {
+    "lat": 17.8850211,
+    "lon": 74.1386352,
+    "display": "415634, Koregaon, Satara, Maharashtra, India"
+  },
+  "415637": {
+    "lat": 17.102977,
+    "lon": 73.455591,
+    "display": "415637, Sangameshwar Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415639": {
+    "lat": 16.9970805,
+    "lon": 73.3372513,
+    "display": "415639, Ratnagiri Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415640": {
+    "lat": 17.816119,
+    "lon": 73.4055832,
+    "display": "415640, Khed Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415701": {
+    "lat": 17.502251,
+    "lon": 73.4464846,
+    "display": "415701, Chiplun Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415702": {
+    "lat": 17.4782696,
+    "lon": 73.3699709,
+    "display": "415702, Chiplun Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415703": {
+    "lat": 17.4839254,
+    "lon": 73.1931329,
+    "display": "415703, Guhagar Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415708": {
+    "lat": 17.6337225,
+    "lon": 73.4341663,
+    "display": "415708, Khed Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415709": {
+    "lat": 17.7111958,
+    "lon": 73.4068826,
+    "display": "415709, Khed Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415710": {
+    "lat": 17.7291587,
+    "lon": 73.3282013,
+    "display": "415710, Khed Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415711": {
+    "lat": 17.6578191,
+    "lon": 73.2904609,
+    "display": "415711, Dapoli Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415718": {
+    "lat": 17.5955464,
+    "lon": 73.6107223,
+    "display": "415718, Khed Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415719": {
+    "lat": 17.5472133,
+    "lon": 73.2717754,
+    "display": "415719, Guhagar Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415722": {
+    "lat": 17.5772444,
+    "lon": 73.5233474,
+    "display": "415722, Khed Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415724": {
+    "lat": 17.4934882,
+    "lon": 73.284733,
+    "display": "415724, Guhagar Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415726": {
+    "lat": 17.3129332,
+    "lon": 73.353247,
+    "display": "415726, Guhagar Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415727": {
+    "lat": 17.6140124,
+    "lon": 73.3943128,
+    "display": "415727, Khed Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415728": {
+    "lat": 17.3991454,
+    "lon": 73.2188537,
+    "display": "415728, Guhagar Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415729": {
+    "lat": 17.3712305,
+    "lon": 73.2171173,
+    "display": "415729, Guhagar Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415730": {
+    "lat": 17.7656331,
+    "lon": 73.5107752,
+    "display": "415730, Khed Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415801": {
+    "lat": 17.0026973,
+    "lon": 73.7144672,
+    "display": "415801, Sangameshwar Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415802": {
+    "lat": 16.9352777,
+    "lon": 73.6614936,
+    "display": "415802, Lanja Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415803": {
+    "lat": 16.9843863,
+    "lon": 73.4973172,
+    "display": "415803, Ratnagiri Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415804": {
+    "lat": 17.0642377,
+    "lon": 73.6001193,
+    "display": "415804, Sangameshwar Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "415807": {
+    "lat": 16.986802,
+    "lon": 73.599804,
+    "display": "415807, Sangameshwar Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "416701": {
+    "lat": 16.8383887,
+    "lon": 73.5582077,
+    "display": "416701, Lanja Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "416712": {
+    "lat": 16.955022,
+    "lon": 73.428444,
+    "display": "416712, Ratnagiri Taluka, Ratnagiri, Maharashtra, India"
+  },
+  "421002": {
+    "lat": 19.2257753,
+    "lon": 73.1644791,
+    "display": "421002, Ulhasnagar, Ulhasnagar Subdistrict, Thane, Maharashtra, India"
+  },
+  "421004": {
+    "lat": 19.2109799,
+    "lon": 73.1616408,
+    "display": "421004, Ulhasnagar, Ulhasnagar Subdistrict, Thane, Maharashtra, India"
+  },
+  "421101": {
+    "lat": 19.3643183,
+    "lon": 73.1757195,
+    "display": "421101, Bhiwandi Subdistrict, Thane, Maharashtra, India"
+  },
+  "421102": {
+    "lat": 19.270143,
+    "lon": 73.1820706,
+    "display": "421102, Kalyan-Dombivli, Kalyan Subdistrict, Thane, Maharashtra, India"
+  },
+  "421103": {
+    "lat": 19.265929,
+    "lon": 73.238978,
+    "display": "421103, Kalyan Subdistrict, Thane, Maharashtra, India"
+  },
+  "421201": {
+    "lat": 19.2140925,
+    "lon": 73.0919786,
+    "display": "421201, Dombivali, Kalyan Subdistrict, Thane, Maharashtra, India"
+  },
+  "421202": {
+    "lat": 19.2231702,
+    "lon": 73.0793257,
+    "display": "421202, Dombivali, Kalyan Subdistrict, Thane, Maharashtra, India"
+  },
+  "421203": {
+    "lat": 19.199715,
+    "lon": 73.0944217,
+    "display": "421203, Dombivali, Kalyan Subdistrict, Thane, Maharashtra, India"
+  },
+  "421204": {
+    "lat": 19.1702967,
+    "lon": 73.0916366,
+    "display": "421204, Dombivali, Kalyan Subdistrict, Thane, Maharashtra, India"
+  },
+  "421301": {
+    "lat": 19.4018989,
+    "lon": 73.1959286,
+    "display": "421301, Bhiwandi Subdistrict, Thane, Maharashtra, India"
+  },
+  "421302": {
+    "lat": 19.2943038,
+    "lon": 73.0542033,
+    "display": "421302, Bhiwandi, Bhiwandi Subdistrict, Thane, Maharashtra, India"
+  },
+  "421305": {
+    "lat": 19.2840298,
+    "lon": 73.0520073,
+    "display": "421305, Bhiwandi - Nizampur, Bhiwandi Subdistrict, Thane, Maharashtra, India"
+  },
+  "421306": {
+    "lat": 19.2277173,
+    "lon": 73.1218226,
+    "display": "421306, Kalyan-Dombivli, Kalyan Subdistrict, Thane, Maharashtra, India"
+  },
+  "421308": {
+    "lat": 19.2943847,
+    "lon": 73.057663,
+    "display": "421308, Bhiwandi, Bhiwandi Subdistrict, Thane, Maharashtra, India"
+  },
+  "421311": {
+    "lat": 19.2549031,
+    "lon": 73.0946941,
+    "display": "421311, Bhiwandi Subdistrict, Thane, Maharashtra, India"
+  },
+  "421401": {
+    "lat": 19.2582443,
+    "lon": 73.3667143,
+    "display": "421401, Murbad Subdistrict, Thane, Maharashtra, India"
+  },
+  "421402": {
+    "lat": 19.314789,
+    "lon": 73.6293715,
+    "display": "421402, Murbad Subdistrict, Thane, Maharashtra, India"
+  },
+  "421501": {
+    "lat": 19.2062166,
+    "lon": 73.1843259,
+    "display": "421501, Ambernath, Ulhasnagar Subdistrict, Thane, Maharashtra, India"
+  },
+  "421503": {
+    "lat": 19.1640574,
+    "lon": 73.2395795,
+    "display": "421503, Badlapur, Kulgaon Badlapur, Ambernath Subdistrict, Thane, Maharashtra, I"
+  },
+  "421505": {
+    "lat": 19.2079678,
+    "lon": 73.2010946,
+    "display": "421505, Ambernath, Ulhasnagar Subdistrict, Thane, Maharashtra, India"
+  },
+  "421601": {
+    "lat": 19.4437816,
+    "lon": 73.3148973,
+    "display": "421601, Shahapur Subdistrict, Thane, Maharashtra, India"
+  },
+  "421602": {
+    "lat": 19.643895,
+    "lon": 73.475132,
+    "display": "421602, Shahapur Subdistrict, Thane, Maharashtra, India"
+  },
+  "421605": {
+    "lat": 19.3083413,
+    "lon": 73.2136188,
+    "display": "421605, Kalyan Subdistrict, Thane, Maharashtra, India"
+  },
+  "440001": {
+    "lat": 21.1537627,
+    "lon": 79.0766952,
+    "display": "440001, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440002": {
+    "lat": 21.1430536,
+    "lon": 79.0840226,
+    "display": "440002, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440004": {
+    "lat": 21.1721095,
+    "lon": 79.0936077,
+    "display": "440004, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440005": {
+    "lat": 21.1017851,
+    "lon": 79.070313,
+    "display": "440005, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440007": {
+    "lat": 21.1624885,
+    "lon": 79.0370239,
+    "display": "440007, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440008": {
+    "lat": 21.1381051,
+    "lon": 79.133895,
+    "display": "440008, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440009": {
+    "lat": 21.1296427,
+    "lon": 79.1137999,
+    "display": "440009, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440010": {
+    "lat": 21.1327576,
+    "lon": 79.0657922,
+    "display": "440010, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440012": {
+    "lat": 21.1374279,
+    "lon": 79.0815792,
+    "display": "440012, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440013": {
+    "lat": 21.177703,
+    "lon": 79.0440176,
+    "display": "440013, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440014": {
+    "lat": 21.1769217,
+    "lon": 79.0885363,
+    "display": "440014, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440015": {
+    "lat": 21.1107489,
+    "lon": 79.0725531,
+    "display": "440015, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440016": {
+    "lat": 21.1269011,
+    "lon": 79.0064041,
+    "display": "440016, Nagpur Rural Taluka, Nagpur, Maharashtra, India"
+  },
+  "440017": {
+    "lat": 21.1633867,
+    "lon": 79.1078181,
+    "display": "440017, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440018": {
+    "lat": 21.1506064,
+    "lon": 79.098998,
+    "display": "440018, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440021": {
+    "lat": 21.1405279,
+    "lon": 79.0447859,
+    "display": "440021, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440022": {
+    "lat": 21.120832,
+    "lon": 79.0530665,
+    "display": "440022, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440023": {
+    "lat": 21.1541735,
+    "lon": 78.9869842,
+    "display": "440023, Nagpur Rural Taluka, Nagpur, Maharashtra, India"
+  },
+  "440024": {
+    "lat": 21.0856024,
+    "lon": 79.0240986,
+    "display": "440024, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440025": {
+    "lat": 21.0996777,
+    "lon": 79.0667447,
+    "display": "440025, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440026": {
+    "lat": 21.1949349,
+    "lon": 79.0911246,
+    "display": "440026, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440027": {
+    "lat": 21.1083042,
+    "lon": 79.0919406,
+    "display": "440027, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440030": {
+    "lat": 21.1928109,
+    "lon": 79.0718662,
+    "display": "440030, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440032": {
+    "lat": 21.1442723,
+    "lon": 79.1048581,
+    "display": "440032, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440033": {
+    "lat": 21.1373895,
+    "lon": 79.0498951,
+    "display": "440033, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440034": {
+    "lat": 21.1010776,
+    "lon": 79.1187202,
+    "display": "440034, Nagpur Rural Taluka, Nagpur, Maharashtra, India"
+  },
+  "440035": {
+    "lat": 21.135437,
+    "lon": 79.1613316,
+    "display": "440035, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440036": {
+    "lat": 21.1164465,
+    "lon": 79.0273868,
+    "display": "440036, Nagpur City, Nagpur Urban Taluka, Nagpur, Maharashtra, India"
+  },
+  "440037": {
+    "lat": 21.0863229,
+    "lon": 79.087902,
+    "display": "440037, Nagpur Rural Taluka, Nagpur, Maharashtra, India"
+  },
+  "441101": {
+    "lat": 21.4317246,
+    "lon": 78.9824829,
+    "display": "441101, Savner, Nagpur, Maharashtra, India"
+  },
+  "441102": {
+    "lat": 21.2711842,
+    "lon": 79.2080764,
+    "display": "441102, Parseoni, Nagpur, Maharashtra, India"
+  },
+  "441103": {
+    "lat": 21.1374903,
+    "lon": 78.6512736,
+    "display": "441103, Katol, Nagpur, Maharashtra, India"
+  },
+  "441104": {
+    "lat": 21.1551167,
+    "lon": 79.4245796,
+    "display": "441104, Lapaka, Mauda Taluka, Nagpur, Maharashtra, India"
+  },
+  "441107": {
+    "lat": 21.3853285,
+    "lon": 78.9226527,
+    "display": "441107, Saoner, Savner, Nagpur, Maharashtra, India"
+  },
+  "441108": {
+    "lat": 20.9644699,
+    "lon": 79.018648,
+    "display": "441108, Nagpur Rural Taluka, Nagpur, Maharashtra, India"
+  },
+  "441109": {
+    "lat": 21.2755221,
+    "lon": 79.1185452,
+    "display": "441109, Savner, Nagpur, Maharashtra, India"
+  },
+  "441111": {
+    "lat": 21.2441534,
+    "lon": 79.0853149,
+    "display": "441111, Kamptee Taluka, Nagpur, Maharashtra, India"
+  },
+  "441112": {
+    "lat": 21.4635618,
+    "lon": 78.8796792,
+    "display": "441112, Savner, Nagpur, Maharashtra, India"
+  },
+  "441113": {
+    "lat": 21.3130544,
+    "lon": 79.0583388,
+    "display": "441113, Savner, Nagpur, Maharashtra, India"
+  },
+  "441122": {
+    "lat": 20.9263585,
+    "lon": 78.9329666,
+    "display": "441122, Hingna, Nagpur, Maharashtra, India"
+  },
+  "441201": {
+    "lat": 20.77937,
+    "lon": 79.4461234,
+    "display": "441201, Bhiwapur Taluka, Nagpur, Maharashtra, India"
+  },
+  "441202": {
+    "lat": 21.0399036,
+    "lon": 79.3098887,
+    "display": "441202, Kuhi Taluka, Nagpur, Maharashtra, India"
+  },
+  "441203": {
+    "lat": 20.8353127,
+    "lon": 79.3292365,
+    "display": "441203, Umred, Nagpur, Maharashtra, India"
+  },
+  "441204": {
+    "lat": 21.1034447,
+    "lon": 79.1440499,
+    "display": "441204, Nagpur Rural Taluka, Nagpur, Maharashtra, India"
+  },
+  "441208": {
+    "lat": 20.4352566,
+    "lon": 79.9955122,
+    "display": "441208, Armori Taluka, Gadchiroli, Maharashtra, India"
+  },
+  "441210": {
+    "lat": 20.8955851,
+    "lon": 79.4626507,
+    "display": "441210, Kuhi Taluka, Nagpur, Maharashtra, India"
+  },
+  "441301": {
+    "lat": 21.3573997,
+    "lon": 78.3981388,
+    "display": "441301, Narkhed, Nagpur, Maharashtra, India"
+  },
+  "441302": {
+    "lat": 21.2751067,
+    "lon": 78.5889072,
+    "display": "441302, Katol, Nagpur, Maharashtra, India"
+  },
+  "441303": {
+    "lat": 21.4580601,
+    "lon": 78.4489606,
+    "display": "441303, Narkhed, Nagpur, Maharashtra, India"
+  },
+  "441304": {
+    "lat": 21.1312411,
+    "lon": 78.1836035,
+    "display": "441304, Ashti, Wardha, Maharashtra, India"
+  },
+  "441305": {
+    "lat": 21.3210095,
+    "lon": 78.5160098,
+    "display": "441305, Katol, Nagpur, Maharashtra, India"
+  },
+  "441306": {
+    "lat": 21.390001,
+    "lon": 78.6697753,
+    "display": "441306, Narkhed, Nagpur, Maharashtra, India"
+  },
+  "441501": {
+    "lat": 21.2247492,
+    "lon": 78.9553555,
+    "display": "441501, Kalameshwar, Nagpur, Maharashtra, India"
+  },
+  "441502": {
+    "lat": 21.2907969,
+    "lon": 78.8112499,
+    "display": "441502, Kalameshwar, Nagpur, Maharashtra, India"
+  }
+}

@@ -1,0 +1,47 @@
+# Python virtual environments & packages
+Lib/
+Scripts/
+.venv/
+venv/
+env/
+
+# Environment variables & secrets (NEVER COMMIT)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.pem
+*.key
+*.cert
+!.env.example
+
+# Python cache & build
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+
+# Node & Frontend builds (User will add new frontend)
+qw/
+frontend/
+node_modules/
+dist/
+build/
+.next/
+*.log
+
+# Large files & archives
+frontend.zip
+*.zip
+*.tar.gz
+
+# Local IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.tempmediaStorage/

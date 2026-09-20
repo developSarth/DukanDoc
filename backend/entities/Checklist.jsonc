@@ -1,0 +1,69 @@
+{
+  "name": "Checklist",
+  "type": "object",
+  "properties": {
+    "business_type": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "business_structure": {
+      "type": "string"
+    },
+    "operations_nature": {
+      "type": "string"
+    },
+    "details": {
+      "type": "string"
+    },
+    "profile_summary": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "business_type",
+    "location"
+  ],
+  "rls": {
+    "read": {
+      "$or": [
+        {
+          "created_by_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "create": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "$or": [
+        {
+          "created_by_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "delete": {
+      "$or": [
+        {
+          "created_by_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    }
+  }
+}
