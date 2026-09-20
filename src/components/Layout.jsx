@@ -56,19 +56,25 @@ export default function Layout() {
             {/* Logo */}
             <Link
               to="/"
-              className="flex items-center gap-2 group transition-smooth"
+              className="flex items-center gap-1 group transition-smooth"
               aria-label="DukanDoc home"
             >
+              <img
+                src="/brandlogo.svg"
+                alt="DukanDoc"
+                style={{ height: '23px', width: 'auto' }}
+                className="object-contain flex-shrink-0 group-hover:scale-105 transition-transform"
+              />
               {/* Wordmark + domain */}
               <div className="flex items-baseline gap-0.5">
                 <span
-                  className="font-heading font-medium text-[15px] tracking-tight"
+                  className="font-inter font-bold text-[17.5px] sm:text-[18px] tracking-tight"
                   style={{ color: 'var(--ink)' }}
                 >
-                  Dukandoc
+                  DukanDoc
                 </span>
                 <span
-                  className="font-heading font-medium text-[15px] tracking-tight"
+                  className="font-inter font-medium text-[16px] tracking-tight"
                   style={{ color: 'var(--slate)' }}
                 >
                   .in
