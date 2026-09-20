@@ -21,7 +21,15 @@ import {
   Clock,
   ChevronDown,
   ChevronUp,
+  Video,
+  PlayCircle,
+  Globe,
+  Phone,
+  MapPin,
+  Navigation,
+  ShieldCheck,
 } from 'lucide-react';
+import MarkdownRenderer from '@/components/MarkdownRenderer';
 
 const SAMPLE_REQUIREMENTS = {
   'req-1': {
@@ -384,9 +392,9 @@ export default function RequirementDetail() {
                   <h2 className="text-lg sm:text-xl font-heading font-bold text-[#004043] mb-1.5">
                     What is it?
                   </h2>
-                  <p className="text-[14.5px] sm:text-[15px] leading-relaxed text-[#4B6B6C]">
-                    {item.description}
-                  </p>
+                  <div className="text-[14.5px] sm:text-[15px] leading-relaxed text-[#4B6B6C]">
+                    <MarkdownRenderer content={item.description} />
+                  </div>
                 </div>
 
                 {item.why_required && (
@@ -394,9 +402,9 @@ export default function RequirementDetail() {
                     <h2 className="text-lg sm:text-xl font-heading font-bold text-[#004043] mb-1.5">
                       Why you need it
                     </h2>
-                    <p className="text-[14.5px] sm:text-[15px] leading-relaxed text-[#4B6B6C]">
-                      {item.why_required}
-                    </p>
+                    <div className="text-[14.5px] sm:text-[15px] leading-relaxed text-[#4B6B6C]">
+                      <MarkdownRenderer content={item.why_required} />
+                    </div>
                   </div>
                 )}
               </div>
@@ -484,6 +492,140 @@ export default function RequirementDetail() {
                   </p>
                 )}
               </div>
+
+              {/* Separator */}
+              <div className="border-t border-slate-100" />
+
+              {/* Block 4: Step-by-Step Procedure & Timeline */}
+              {item.process_and_timeline && (
+                <>
+                  <div className="p-5 sm:p-6 bg-[#FBFDFB]/40">
+                    <h2 className="text-lg sm:text-xl font-heading font-bold text-[#004043] mb-2.5 flex items-center gap-2">
+                      <Clock className="h-4.5 w-4.5 text-[#004043]" /> Step-by-Step Procedure &amp; Timeline
+                    </h2>
+                    <div className="text-[14px] text-[#4B6B6C] leading-relaxed">
+                      <MarkdownRenderer content={item.process_and_timeline} />
+                    </div>
+                  </div>
+                  <div className="border-t border-slate-100" />
+                </>
+              )}
+
+              {/* Block 5: Nearest Official Aaple Sarkar / CSC Kiosk */}
+              {item.nearest_govt_center && (
+                <>
+                  <div className="p-5 sm:p-6">
+                    <div className="p-4 rounded-xl border border-emerald-200/80 bg-emerald-50/40 dark:bg-emerald-950/20 shadow-2xs">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div>
+                          <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-800">
+                            <ShieldCheck className="h-4 w-4 text-emerald-600 flex-shrink-0" />
+                            <span>Nearest Official Aaple Sarkar / CSC Kiosk</span>
+                            {item.nearest_govt_center.distance_label && (
+                              <span className="text-[11px] font-bold text-blue-700 bg-blue-50 border border-blue-200 rounded-full px-2 py-0.5 ml-1 inline-flex items-center gap-0.5">
+                                <Navigation className="h-2.5 w-2.5" />
+                                {item.nearest_govt_center.distance_label}
+                              </span>
+                            )}
+                          </div>
+                          <h4 className="text-sm font-semibold text-foreground mt-1">
+                            {item.nearest_govt_center.name}
+                          </h4>
+                          <p className="text-xs text-muted-foreground mt-0.5 flex items-center gap-1">
+                            <MapPin className="h-3 w-3 flex-shrink-0" />
+                            <span className="line-clamp-1">{item.nearest_govt_center.location}</span>
+                          </p>
+                        </div>
+                        {item.nearest_govt_center.phone && (
+                          <a
+                            href={`tel:${item.nearest_govt_center.phone}`}
+                            className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-100 hover:bg-emerald-200 px-3 py-1.5 rounded-lg transition-colors flex-shrink-0"
+                          >
+                            <Phone className="h-3.5 w-3.5" />
+                            <span>Call Center</span>
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="border-t border-slate-100" />
+                </>
+              )}
+
+              {/* Block 6: YouTube Video Tutorials & Walkthroughs */}
+              {item.youtube_guides && item.youtube_guides.length > 0 && (
+                <>
+                  <div className="p-5 sm:p-6">
+                    <h2 className="text-lg sm:text-xl font-heading font-bold text-[#004043] mb-1 flex items-center gap-2">
+                      <PlayCircle className="h-4.5 w-4.5 text-red-600" /> Video Tutorials &amp; Walkthroughs
+                    </h2>
+                    <p className="text-xs text-slate-500 mb-3.5">
+                      Watch step-by-step video application guides discovered for this clearance:
+                    </p>
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      {item.youtube_guides.map((yt, i) => (
+                        <a
+                          key={i}
+                          href={yt.link}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="p-3.5 rounded-xl border border-red-200/60 bg-red-50/25 hover:border-red-300 hover:bg-red-50/50 transition-all flex flex-col justify-between group shadow-2xs"
+                        >
+                          <div>
+                            <div className="flex items-center gap-1.5 text-[11px] font-semibold text-red-600 mb-1">
+                              <Video className="h-3 w-3" />
+                              <span>YouTube Tutorial</span>
+                            </div>
+                            <h4 className="text-xs font-semibold text-[#004043] group-hover:text-red-700 leading-snug line-clamp-2">
+                              {yt.title}
+                            </h4>
+                            {yt.snippet && (
+                              <p className="text-[11px] text-slate-500 mt-1 line-clamp-2 leading-relaxed">
+                                {yt.snippet}
+                              </p>
+                            )}
+                          </div>
+                          <div className="mt-2.5 pt-2 border-t border-red-200/40 flex items-center justify-between text-xs font-semibold text-red-600 group-hover:text-red-700">
+                            <span>Watch Guide</span>
+                            <ExternalLink className="h-3 w-3" />
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="border-t border-slate-100" />
+                </>
+              )}
+
+              {/* Block 7: Step-by-Step Online Web Guides */}
+              {item.web_guides && item.web_guides.length > 0 && (
+                <div className="p-5 sm:p-6">
+                  <h2 className="text-lg sm:text-xl font-heading font-bold text-[#004043] mb-1 flex items-center gap-2">
+                    <Globe className="h-4.5 w-4.5 text-blue-600" /> Official Guides &amp; Articles
+                  </h2>
+                  <div className="space-y-2 mt-3">
+                    {item.web_guides.map((wg, i) => (
+                      <a
+                        key={i}
+                        href={wg.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="p-3 rounded-lg border border-slate-200 bg-white hover:border-blue-300 hover:bg-blue-50/20 transition-all block group shadow-2xs"
+                      >
+                        <div className="text-xs font-semibold text-[#004043] group-hover:text-blue-600 flex items-center justify-between gap-2">
+                          <span className="line-clamp-1">{wg.title}</span>
+                          <ExternalLink className="h-3.5 w-3.5 flex-shrink-0 text-slate-400 group-hover:text-blue-600" />
+                        </div>
+                        {wg.snippet && (
+                          <p className="text-[11px] text-slate-500 mt-1 line-clamp-2 leading-relaxed">
+                            {wg.snippet}
+                          </p>
+                        )}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
             </CardContent>
           </Card>
         </div>

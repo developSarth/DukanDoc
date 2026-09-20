@@ -118,6 +118,10 @@ export default function IntakeWizard() {
           difficulty: r.difficulty || 'moderate',
           is_official: r.is_official !== false,
           sources: r.sources || [],
+          youtube_guides: r.youtube_guides || [],
+          web_guides: r.web_guides || [],
+          nearby_agents: r.nearby_agents || [],
+          nearest_govt_center: r.nearest_govt_center || null,
         }))
       );
       navigate(`/checklist/${checklist.id}`);

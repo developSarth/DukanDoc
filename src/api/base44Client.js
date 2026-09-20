@@ -290,20 +290,58 @@ export const base44 = {
 
   functions: {
     async invoke(functionName, payload = {}) {
-      // Simulate network latency (200-500ms)
-      await new Promise((r) => setTimeout(r, 400));
+      const BACKEND_URL = 'http://127.0.0.1:8000';
 
       if (functionName === 'generateChecklist') {
+        try {
+          const resp = await fetch(`${BACKEND_URL}/api/generateChecklist`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          if (resp.ok) {
+            const result = await resp.json();
+            return result;
+          }
+        } catch (err) {
+          console.warn('[base44Client] Backend /api/generateChecklist failed, using offline fallback', err);
+        }
         const data = generateDummyRequirements(payload);
         return { data };
       }
 
       if (functionName === 'findProfessionals') {
+        try {
+          const resp = await fetch(`${BACKEND_URL}/api/findProfessionals`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          if (resp.ok) {
+            const result = await resp.json();
+            return result;
+          }
+        } catch (err) {
+          console.warn('[base44Client] Backend /api/findProfessionals failed, using offline fallback', err);
+        }
         const pros = generateDummyProfessionals(payload);
         return { data: { professionals: pros } };
       }
 
       if (functionName === 'sendInquiry') {
+        try {
+          const resp = await fetch(`${BACKEND_URL}/api/sendInquiry`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          if (resp.ok) {
+            const result = await resp.json();
+            return result;
+          }
+        } catch (err) {
+          console.warn('[base44Client] Backend /api/sendInquiry failed', err);
+        }
         return { data: { ok: true } };
       }
 

@@ -19,7 +19,10 @@ import {
   Landmark,
   Layers,
   ShieldCheck,
+  ChevronDown,
+  ChevronUp,
 } from 'lucide-react';
+import MarkdownRenderer from '@/components/MarkdownRenderer';
 
 function getCategoryIcon(category) {
   if (!category) return FileText;
@@ -171,6 +174,7 @@ export default function Checklist() {
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [calendarOpenId, setCalendarOpenId] = useState(null);
+  const [showBriefing, setShowBriefing] = useState(true);
 
   useEffect(() => {
     async function loadData() {
@@ -330,9 +334,53 @@ export default function Checklist() {
           </h1>
 
           {clData.profile_summary && (
-            <p className="text-sm sm:text-[15px] leading-relaxed max-w-3xl mb-5" style={{ color: 'var(--slate)' }}>
-              {clData.profile_summary}
-            </p>
+            <div
+              className="my-5 rounded-2xl p-5 sm:p-6 transition-all"
+              style={{
+                backgroundColor: 'rgba(0, 64, 67, 0.03)',
+                border: '1px solid rgba(0, 64, 67, 0.12)',
+              }}
+            >
+              <div className="flex items-center justify-between pb-3 border-b" style={{ borderColor: 'rgba(0, 64, 67, 0.08)' }}>
+                <div className="flex items-center gap-2">
+                  <div className="p-1.5 rounded-lg" style={{ backgroundColor: 'rgba(0, 64, 67, 0.08)', color: 'var(--ink)' }}>
+                    <Sparkles className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm sm:text-base font-semibold" style={{ color: 'var(--ink)' }}>
+                      Executive Legal &amp; Compliance Roadmap
+                    </h3>
+                    <p className="text-xs text-muted-foreground">
+                      Authoritative regulatory briefing grounded in live Maharashtra statutory data
+                    </p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setShowBriefing(!showBriefing)}
+                  className="text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1 transition-colors hover:bg-black/5"
+                  style={{ color: 'var(--ink)' }}
+                >
+                  {showBriefing ? (
+                    <>
+                      <span>Collapse</span>
+                      <ChevronUp className="h-3.5 w-3.5" />
+                    </>
+                  ) : (
+                    <>
+                      <span>Read Roadmap</span>
+                      <ChevronDown className="h-3.5 w-3.5" />
+                    </>
+                  )}
+                </button>
+              </div>
+
+              {showBriefing && (
+                <div className="mt-4 pt-1">
+                  <MarkdownRenderer content={clData.profile_summary} />
+                </div>
+              )}
+            </div>
           )}
 
           {/* Motion Graphics: Sleek Liquid Gradient Progress Bar Scrub */}
