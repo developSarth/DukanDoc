@@ -5,6 +5,7 @@ Starting a business in India shouldn't feel like navigating a maze of obscure mu
 
 **DukanDoc** is an intelligent compliance guide built for Indian entrepreneurs. Tell it what kind of business you're launching and where, and it instantly maps out your complete compliance roadmap — including Central, State, and Municipal licenses (FSSAI, GST, Udyam MSME, Shop & Establishment Gumasta, BMC Health Trade permits), official government fees, exact timelines, official portal links, YouTube video walkthroughs, and verified local experts.
 
+**Deployed Link : http://13.203.197.156/ **
 ---
 
 ## ✨ Key Features
