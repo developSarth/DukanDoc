@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { useAuth } from '@/lib/AuthContext';
 import { LogIn, LogOut, Inbox, User, Menu, X } from 'lucide-react';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import GuidedTour from '@/components/GuidedTour';
 
 export default function Layout() {
   const { user, isAuthenticated, logout } = useAuth();
@@ -90,8 +92,10 @@ export default function Layout() {
               ))}
             </nav>
 
-            {/* Auth + mobile toggle */}
+            {/* Auth, Language Switcher + mobile toggle */}
             <div className="flex items-center gap-2">
+              <LanguageSwitcher />
+
               {isAuthenticated ? (
                 <>
                   <span
@@ -274,6 +278,9 @@ export default function Layout() {
           </div>
         </div>
       </footer>
+
+      {/* ── Guided Recommendation Usage Tour ──────────────────────── */}
+      <GuidedTour />
     </div>
   );
 }

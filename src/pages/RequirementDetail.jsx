@@ -758,7 +758,8 @@ export default function RequirementDetail() {
             style={{ borderColor: 'rgba(0,64,67,0.10)' }}
           >
             <h3 className="text-sm sm:text-base font-heading font-bold text-[#004043] flex items-center gap-2">
-              <PlayCircle className="h-4 w-4 text-[#004043]" /> Video Tutorials &amp; Walkthroughs
+              <Video className="h-4 w-4 text-[#004043]" />
+              <span>Video Tutorials &amp; Walkthroughs</span>
             </h3>
             <div className="space-y-2">
               {getYoutubeGuides(item).map((yt, i) => (
@@ -771,10 +772,15 @@ export default function RequirementDetail() {
                 >
                   <div className="flex items-center justify-between gap-2">
                     <div className="flex items-center gap-1.5 text-xs font-normal text-[#004043]">
-                      <Video className="h-3.5 w-3.5 text-[#004043] flex-shrink-0" />
+                      <img
+                        src="/ytlogo.svg"
+                        alt="YouTube"
+                        style={{ width: '16px', height: '16px', minWidth: '16px', minHeight: '16px' }}
+                        className="object-contain group-hover:scale-125 transition-transform duration-200 cursor-pointer"
+                      />
                       <span>YouTube Tutorial</span>
                     </div>
-                    <ExternalLink className="h-3.5 w-3.5 flex-shrink-0 text-slate-400 group-hover:text-[#004043] transition-colors" />
+                    <ExternalLink className="h-3.5 w-3.5 flex-shrink-0 text-slate-400 group-hover:text-[#004043] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                   </div>
                   <h4 className="text-xs sm:text-[13px] font-normal text-[#4B6B6C] group-hover:text-[#004043] transition-colors leading-snug mt-1 line-clamp-2">
                     {yt.title}
