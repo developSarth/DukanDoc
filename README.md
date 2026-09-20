@@ -1,5 +1,5 @@
 # DukanDoc 🇮🇳
-**Your AI Business Setup Guide for India**
+**Your AI Business Setup Guide for India (Currently Maharashtra)**
 
 Starting a business in India shouldn't feel like navigating a maze of obscure municipal portals, paperwork, and middlemen. 
 
