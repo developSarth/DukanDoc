@@ -1,62 +1,78 @@
-# Base44 Project
+# DukanDoc 🇮🇳
+**Your AI Business Setup Guide for India**
 
-Use this repository to run and edit the app locally, then publish changes back through Base44.
+Starting a business in India shouldn't feel like navigating a maze of obscure municipal portals, paperwork, and middlemen. 
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
+**DukanDoc** is an intelligent compliance guide built for Indian entrepreneurs. Tell it what kind of business you're launching and where, and it instantly maps out your complete compliance roadmap — including Central, State, and Municipal licenses (FSSAI, GST, Udyam MSME, Shop & Establishment Gumasta, BMC Health Trade permits), official government fees, exact timelines, official portal links, YouTube video walkthroughs, and verified local experts.
 
-## Prerequisites
+---
 
-1. Clone the repository using the project's Git URL.
-2. Navigate to the project directory.
-3. Install dependencies: `npm install`.
-4. Install the Base44 CLI: `npm install -g base44@latest`.
-5. Install [Deno](https://docs.deno.com/runtime/getting_started/installation/) — the local Base44 backend runs on it.
+## ✨ Key Features
 
-Run `base44 --help` (or see the [CLI reference](https://docs.base44.com/developers/references/cli/commands/introduction)) for the full command surface.
+- 📋 **Personalized Compliance Checklist**: Dynamic requirement mapping tailored to your business type, scale, and location.
+- 🏛️ **Official Portals & Transparent Fees**: Direct links to government filing portals (*Aaple Sarkar*, *FoSCoS*, *Mahagst*, *GSTN*) with zero hidden broker markups.
+- 📺 **Step-by-Step Video Walkthroughs**: Curated YouTube guides inside each document dossier to help you apply yourself.
+- 📅 **Deadline & Reminder Tracking**: Progress tracking with custom filing deadlines and status indicators.
+- 🤝 **Local Expert Directory**: Connect directly with verified local Chartered Accountants, advocates, and filing agents near your shop.
+- 🌐 **Multilingual**: Full support for English, Hindi (**हिंदी**), and Marathi (**मराठी**).
+- 🧭 **Guided Onboarding**: A gentle, skippable walkthrough highlighting key platform workflows.
 
-## Run Locally
+---
 
-Three commands, from the project root:
+## 🚀 Running Locally
 
+### 1. Clone the Repository
 ```bash
-base44 login   # one-time per machine
-base44 link    # one-time per clone
-base44 dev     # local backend + frontend together
+git clone https://github.com/developSarth/DukanDoc.git
+cd DukanDoc
 ```
 
-Open the frontend URL that `base44 dev` prints (typically `http://localhost:5173`).
-
-Notes:
-
-- **Every fresh clone needs `base44 link`.** It writes `base44/.app.jsonc` (the app-id pointer), which is deliberately gitignored. Your app id is in the Builder URL (`app.base44.com/apps/<id>/...`); `base44 link --help` shows the non-interactive flags.
-- **`base44 dev` runs the frontend for you** (via `site.serveCommand` in this repo's `base44/config.jsonc`) — never run `npm run dev` yourself: alone it serves a UI with no backend behind it (`[base44] Proxy not enabled`, every `/api` call fails), and alongside `base44 dev` the second Vite silently takes the next port and you end up looking at the wrong one.
-- **The app must be published at least once for the UI to load under `base44 dev`.** The frontend boots by fetching app settings from the hosted app; before the first publish that fails and every page redirects to login. The local API works regardless.
-- Entities, functions, and auth run locally — entity data is **in-memory only**, wiped when `base44 dev` restarts. Everything else (Core integrations, OAuth login) is forwarded to your deployed app. Full breakdown: [Local development overview](https://docs.base44.com/developers/backend/overview/local-dev/local-development-overview).
-
-## Frontend Only, Hosted Backend
-
-To work on just the frontend against your app's live hosted backend:
-
+### 2. Frontend Setup (React + Vite)
 ```bash
-base44 dev --remote
+# Install dependencies
+npm install
+
+# Start the Vite dev server
+npm run dev
 ```
+Open **[http://localhost:5173](http://localhost:5173)** in your browser.
 
-⚠️ In this mode writes go to your app's **production data** — plain `base44 dev` keeps everything local.
-
-## Publish Your Changes
-
-After pushing your changes to git, open the Base44 dashboard and publish the app:
-
+### 3. Backend Setup (FastAPI + Python)
+In a separate terminal:
 ```bash
-base44 dashboard open
+# Navigate to backend
+cd backend
+
+# Install Python requirements
+pip install -r requirements.txt
+
+# Start the API server
+python server.py
 ```
+The backend will boot on **[http://localhost:8000](http://localhost:8000)**.
 
-This repo syncs to Base44 through git, so publish from the dashboard rather than `base44 deploy` — a CLI deploy ships your local tree directly, bypassing the sync, and the deployed state silently diverges from the repo.
+### 4. Environment Variables
+Create a `.env` file in the project root:
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+GOOGLE_PLACES_API_KEY=your_google_places_api_key_here
+SERPAPI_KEY=your_serpapi_key_here
+```
+*(See `.env.example` for reference.)*
 
-## Docs & Support
+---
 
-GitHub integration: [https://docs.base44.com/developers/app-code/local-development/github](https://docs.base44.com/developers/app-code/local-development/github)
+## 🛠️ Tech Stack
 
-Local development: [https://docs.base44.com/developers/backend/overview/local-dev/local-development-overview](https://docs.base44.com/developers/backend/overview/local-dev/local-development-overview)
+- **Frontend**: React 18, Vite, Tailwind CSS, Lucide Icons, Date-fns
+- **Backend**: Python 3.11+, FastAPI, Uvicorn, Pandas, OpenPyXL
+- **AI & Integrations**: OpenAI GPT-4o-mini, Google Places API
+- **Deployment**: AWS EC2 (Ubuntu), Nginx reverse proxy
 
-Support: [https://app.base44.com/support](https://app.base44.com/support)
+---
+
+## 🤝 Contributing & Feedback
+
+Got ideas to improve compliance workflows for local shops? Found an outdated government fee or portal link? PRs and issues are warmly welcomed!
+
+Made with ❤️ for entrepreneurs across India.

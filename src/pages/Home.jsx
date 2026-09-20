@@ -91,7 +91,7 @@ export default function Home() {
       >
         <div className="max-w-5xl mx-auto px-6 relative z-10">
           <div className="text-center animate-fade-up">
-            {/* Headline - Capital B in Business, colored Legally without bold */}
+            {/* Headline - Original serif font, Capital B in Business, colored Legally without bold */}
             <h1
               className="font-serif font-normal text-4xl sm:text-6xl md:text-[66px] mb-4 max-w-4xl mx-auto"
               style={{
