@@ -167,20 +167,21 @@ function useRollingTicker(target, duration = 850) {
   return count;
 }
 
-function cleanExecutiveSummary(text) {
+function getShortCleanSummary(text) {
   if (!text) return '';
-  // If legacy profile_summary contains Section 2 (Per-License Breakdown), strip it out
-  if (text.includes('## 2. Mandatory Clearances') || text.includes('## 2.') || text.includes('### [')) {
-    const sections = text.split(/(?=## [1-4]\.)/);
-    const filtered = sections.filter((s) => !s.trim().startsWith('## 2.'));
-    let cleaned = filtered.join('\n\n').trim();
-    cleaned = cleaned
-      .replace(/-\s*\*\*Video Tutorial Walkthrough[\s\S]*?(?=\n-|\n#|\n\n|$)/gi, '')
-      .replace(/-\s*\*\*Recommended Local Assistance[\s\S]*?(?=\n-|\n#|\n\n|$)/gi, '')
-      .replace(/-\s*\*\*Cheapest & Fastest[\s\S]*?(?=\n-|\n#|\n\n|$)/gi, '');
-    return cleaned.trim();
-  }
-  return text;
+  // Strip any markdown headings and list syntax to leave a clean, elegant summary paragraph
+  let clean = text
+    .replace(/^#+.*$/gm, '')
+    .replace(/###\s*Regulatory Overview/gi, '')
+    .replace(/-\s*\*\*Phase[\s\S]*$/gi, '')
+    .replace(/###\s*Phased[\s\S]*$/gi, '')
+    .replace(/###\s*In-Person[\s\S]*$/gi, '')
+    .replace(/-\s*\*\*Nearest[\s\S]*$/gi, '')
+    .replace(/-\s*\*\*Video[\s\S]*$/gi, '')
+    .replace(/##\s*2\.[\s\S]*$/gi, '')
+    .replace(/\*\*/g, '')
+    .trim();
+  return clean || text;
 }
 
 export default function Checklist() {
@@ -190,7 +191,6 @@ export default function Checklist() {
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [calendarOpenId, setCalendarOpenId] = useState(null);
-  const [showBriefing, setShowBriefing] = useState(true);
 
   useEffect(() => {
     async function loadData() {
@@ -270,7 +270,124 @@ export default function Checklist() {
   const clData = checklist || FALLBACK_CHECKLIST;
 
   return (
-    <div className="min-h-screen pb-24" style={{ backgroundColor: 'var(--canvas)' }}>
+    <div className="min-h-screen pb-24 relative overflow-hidden" style={{ backgroundColor: 'var(--canvas)' }}>
+      {/* ── Ambient Background Subtle Decorative Elements ────────── */}
+      {/* Glowing atmospheric gradient blobs */}
+      <div
+        className="absolute top-0 right-0 w-[580px] h-[580px] rounded-full pointer-events-none -z-10 blur-[140px]"
+        style={{
+          background: 'radial-gradient(circle, rgba(208, 255, 113, 0.22) 0%, rgba(0, 64, 67, 0.08) 50%, transparent 75%)',
+        }}
+      />
+      <div
+        className="absolute top-[35%] -left-36 w-[500px] h-[500px] rounded-full pointer-events-none -z-10 blur-[130px]"
+        style={{
+          background: 'radial-gradient(circle, rgba(0, 64, 67, 0.08) 0%, rgba(115, 158, 130, 0.12) 50%, transparent 70%)',
+        }}
+      />
+      <div
+        className="absolute bottom-10 right-[5%] w-[480px] h-[480px] rounded-full pointer-events-none -z-10 blur-[140px]"
+        style={{
+          background: 'radial-gradient(circle, rgba(39, 234, 166, 0.12) 0%, rgba(0, 64, 67, 0.06) 50%, transparent 75%)',
+        }}
+      />
+
+      {/* Architectural subtle micro-dot grid */}
+      <div
+        className="absolute inset-0 pointer-events-none -z-10 opacity-[0.32]"
+        style={{
+          backgroundImage: 'radial-gradient(rgba(0, 64, 67, 0.15) 1px, transparent 1px)',
+          backgroundSize: '28px 28px',
+        }}
+      />
+
+      {/* Topographic Contour Wave Ribbons (SVG) */}
+      <svg
+        className="absolute top-8 left-0 w-full h-[650px] pointer-events-none -z-10 opacity-[0.08] overflow-visible"
+        viewBox="0 0 1440 650"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M-100 200 C300 120, 600 350, 1000 180 C1250 80, 1400 220, 1600 140"
+          stroke="#004043"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+        />
+        <path
+          d="M-50 280 C350 200, 650 420, 1050 260 C1300 160, 1450 300, 1650 220"
+          stroke="#004043"
+          strokeWidth="1.2"
+        />
+        <path
+          d="M-80 380 C320 300, 720 500, 1100 360 C1350 270, 1480 390, 1680 310"
+          stroke="#004043"
+          strokeWidth="1"
+          strokeDasharray="8 6"
+        />
+      </svg>
+
+      {/* Subtle concentric orbital radar watermark in top-right */}
+      <div className="absolute top-12 -right-16 w-80 h-80 rounded-full border border-[rgba(0,64,67,0.06)] pointer-events-none -z-10" />
+      <div className="absolute top-24 -right-4 w-56 h-56 rounded-full border border-dashed border-[rgba(0,64,67,0.08)] pointer-events-none -z-10" />
+      <div className="absolute top-36 right-8 w-32 h-32 rounded-full border border-[rgba(0,64,67,0.05)] pointer-events-none -z-10" />
+
+      {/* Subtle orbital radar watermark in mid-left */}
+      <div className="absolute top-[48%] -left-20 w-72 h-72 rounded-full border border-dashed border-[rgba(0,64,67,0.05)] pointer-events-none -z-10" />
+
+      {/* Modern Crosshair Grid Markers */}
+      <div className="absolute top-28 left-8 text-[11px] font-mono text-[#004043]/20 select-none pointer-events-none hidden md:block">
+        +
+      </div>
+      <div className="absolute top-72 right-12 text-[11px] font-mono text-[#004043]/20 select-none pointer-events-none hidden md:block">
+        +
+      </div>
+      <div className="absolute top-[600px] left-12 text-[11px] font-mono text-[#004043]/20 select-none pointer-events-none hidden md:block">
+        +
+      </div>
+      <div className="absolute top-[850px] right-14 text-[11px] font-mono text-[#004043]/20 select-none pointer-events-none hidden md:block">
+        +
+      </div>
+
+      {/* Flanking Architectural Badges in Desktop Margins (xl & up) */}
+      <div className="hidden xl:flex fixed left-6 2xl:left-10 top-36 flex-col gap-6 select-none pointer-events-none opacity-40 z-0">
+        <div className="flex items-center gap-2 text-[10px] tracking-widest uppercase font-mono text-[#004043]">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#004043]" />
+          <span>GOVT VERIFIED ENGINE</span>
+        </div>
+        <div className="space-y-4 pl-1 text-[11px] font-mono text-[#004043]/70">
+          <div className="flex items-center gap-2">
+            <span className="w-1 h-1 rounded-full bg-[#004043]/40" />
+            <span>FOSCOS // FSSAI</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-1 h-1 rounded-full bg-[#004043]/40" />
+            <span>GST COMMON PORTAL</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-1 h-1 rounded-full bg-[#004043]/40" />
+            <span>MAHAGST // P-TAX</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-1 h-1 rounded-full bg-[#004043]/40" />
+            <span>MCGM // CITIZEN PORTAL</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="hidden xl:flex fixed right-6 2xl:right-10 top-36 flex-col items-end gap-6 select-none pointer-events-none opacity-40 z-0 text-right">
+        <div className="flex items-center gap-2 text-[10px] tracking-widest uppercase font-mono text-[#004043]">
+          <span>STATUS // ONLINE</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-[#27EAA6] animate-pulse" />
+        </div>
+        <div className="space-y-4 pr-1 text-[11px] font-mono text-[#004043]/70">
+          <div>LAT 19.0760° N</div>
+          <div>LNG 72.8777° E</div>
+          <div>REGION: IN-MH</div>
+          <div>COMPLIANCE ID: 2026</div>
+        </div>
+      </div>
+
       {/* ── Top Bar & Actions ─────────────────────────────────── */}
       <div className="border-b" style={{ borderColor: 'rgba(0,64,67,0.08)' }}>
         <div className="max-w-5xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-4">
@@ -334,74 +451,31 @@ export default function Checklist() {
               </span>
             </div>
 
-            <div className="text-right flex items-center gap-2">
-              <span className="text-2xl sm:text-3xl font-heading font-semibold" style={{ color: 'var(--ink)' }}>
-                {rollingPercent}%
+            <div className="text-right flex items-baseline gap-1.5">
+              <span className="text-2xl sm:text-3xl font-heading font-bold" style={{ color: 'var(--ink)' }}>
+                {rollingPercent}%!
               </span>
-              <span className="text-xs text-slate-500">complete</span>
+              <span className="text-xs sm:text-[13.5px] font-medium text-slate-500">complete</span>
             </div>
           </div>
 
           <h1
-            className="text-2xl sm:text-4xl font-heading font-medium tracking-tight mb-2"
+            className="text-2xl sm:text-4xl font-heading font-bold tracking-tight mb-2"
             style={{ color: 'var(--ink)' }}
           >
             {clData.business_type}
           </h1>
 
+          {/* Clean, short summary placed directly below heading without mentioning or tiling it */}
           {clData.profile_summary && (
-            <div
-              className="my-5 rounded-2xl p-5 sm:p-6 transition-all"
-              style={{
-                backgroundColor: 'rgba(0, 64, 67, 0.03)',
-                border: '1px solid rgba(0, 64, 67, 0.12)',
-              }}
-            >
-              <div className="flex items-center justify-between pb-3 border-b" style={{ borderColor: 'rgba(0, 64, 67, 0.08)' }}>
-                <div className="flex items-center gap-2">
-                  <div className="p-1.5 rounded-lg" style={{ backgroundColor: 'rgba(0, 64, 67, 0.08)', color: 'var(--ink)' }}>
-                    <Sparkles className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <h3 className="text-sm sm:text-base font-semibold" style={{ color: 'var(--ink)' }}>
-                      Executive Compliance Overview
-                    </h3>
-                    <p className="text-xs text-muted-foreground">
-                      High-level regulatory posture and execution phases (click View Details below for individual document guides)
-                    </p>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => setShowBriefing(!showBriefing)}
-                  className="text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1 transition-colors hover:bg-black/5"
-                  style={{ color: 'var(--ink)' }}
-                >
-                  {showBriefing ? (
-                    <>
-                      <span>Collapse</span>
-                      <ChevronUp className="h-3.5 w-3.5" />
-                    </>
-                  ) : (
-                    <>
-                      <span>Read Overview</span>
-                      <ChevronDown className="h-3.5 w-3.5" />
-                    </>
-                  )}
-                </button>
-              </div>
-
-              {showBriefing && (
-                <div className="mt-4 pt-1 text-sm leading-relaxed">
-                  <MarkdownRenderer content={cleanExecutiveSummary(clData.profile_summary)} />
-                </div>
-              )}
-            </div>
+            <p className="text-[14.5px] sm:text-[15px] leading-relaxed text-[#5A6E70] max-w-3xl mb-5">
+              {getShortCleanSummary(clData.profile_summary)}
+            </p>
           )}
 
-          {/* Motion Graphics: Sleek Liquid Gradient Progress Bar Scrub */}
+          {/* Progress Bar: Dark Green to Sage Green Gradient with Completion Checkpoint */}
           <div className="pt-4 border-t" style={{ borderColor: 'rgba(0,64,67,0.08)' }}>
-            <div className="flex justify-between items-center text-xs font-medium mb-2" style={{ color: 'var(--slate)' }}>
+            <div className="flex justify-between items-center text-xs font-medium mb-2.5" style={{ color: 'var(--slate)' }}>
               <span>Compliance Status ({doneCount} of {total} completed)</span>
               <span className="flex items-center gap-3">
                 <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-[#004043]" /> {doneCount} done</span>
@@ -409,14 +483,27 @@ export default function Checklist() {
                 <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-slate-300" /> {total - doneCount - inProgressCount} to do</span>
               </span>
             </div>
-            <div className="w-full h-2 rounded-full overflow-hidden" style={{ backgroundColor: 'rgba(0,64,67,0.06)' }}>
+            <div className="flex items-center gap-2.5 w-full">
+              <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ backgroundColor: 'rgba(0,64,67,0.08)' }}>
+                <div
+                  className="h-full rounded-full transition-all duration-500 ease-out"
+                  style={{
+                    width: `${targetPercent}%`,
+                    background: 'linear-gradient(90deg, #5B8266 0%, #004043 100%)',
+                  }}
+                />
+              </div>
+              {/* Small circle with check point on the end to signify completion */}
               <div
-                className="h-full rounded-full progress-bar-scrub"
-                style={{
-                  width: `${targetPercent}%`,
-                  background: 'linear-gradient(90deg, rgba(39, 234, 166, 0.90) 0%, rgba(0, 64, 67, 0.95) 100%)',
-                }}
-              />
+                className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 transition-all border ${
+                  targetPercent === 100
+                    ? 'bg-[#004043] border-[#004043] text-white shadow-xs'
+                    : 'bg-white border-slate-300 text-slate-400'
+                }`}
+                title={targetPercent === 100 ? 'All requirements completed' : `${total - doneCount} remaining`}
+              >
+                <CheckCircle2 className="w-3.5 h-3.5" />
+              </div>
             </div>
           </div>
         </div>
@@ -479,11 +566,11 @@ export default function Checklist() {
               return (
                 <div
                   key={`${selectedCategory}-${item.id || index}`}
-                  className="animate-card-stagger bg-white rounded-2xl sm:rounded-3xl border p-6 sm:p-7 transition-all duration-300 hover:shadow-md relative group"
+                  className="animate-card-stagger bg-white rounded-2xl sm:rounded-3xl border p-4 sm:p-5 sm:px-6 transition-all duration-300 hover:shadow-md relative group hover:border-[#004043]/30"
                   style={{
                     animationDelay: `${index * 0.05}s`,
-                    borderColor: isDone ? 'rgba(6, 95, 70, 0.28)' : 'rgba(0, 64, 67, 0.09)',
-                    boxShadow: '0 2px 14px rgba(0, 40, 43, 0.03)',
+                    borderColor: isDone ? 'rgba(0, 64, 67, 0.35)' : 'rgba(0, 64, 67, 0.12)',
+                    boxShadow: isDone ? '0 4px 18px rgba(0, 64, 67, 0.07)' : '0 4px 16px rgba(0, 64, 67, 0.04)',
                   }}
                 >
                 {/* Motion Graphics: Ink Stamp Effect when marked Complete */}

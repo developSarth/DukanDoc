@@ -91,19 +91,27 @@ export default function Home() {
       >
         <div className="max-w-5xl mx-auto px-6 relative z-10">
           <div className="text-center animate-fade-up">
-            {/* Eyebrow - normal casing and flag emoji */}
+            {/* Eyebrow - Made in India with SVG flag */}
             <div className="inline-flex items-center justify-center w-full mb-4">
-              <span className="text-xs font-semibold tracking-wide" style={{ color: 'var(--slate)' }}>
-                Made for India 🇮🇳
+              <span
+                className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/85 backdrop-blur-sm border border-[rgba(0,64,67,0.10)] shadow-2xs text-xs font-semibold tracking-wide"
+                style={{ color: 'var(--slate)' }}
+              >
+                <span>Made in India</span>
+                <img
+                  src="/ind.svg"
+                  alt="Flag of India"
+                  className="w-4.5 h-3 object-cover rounded-[2px] shadow-xs inline-block border border-black/5"
+                />
               </span>
             </div>
 
             {/* Headline - Capital B in Business, colored Legally */}
             <h1
-              className="font-heading font-medium text-4xl sm:text-6xl md:text-[66px] mb-4 max-w-4xl mx-auto"
+              className="font-serif font-normal text-4xl sm:text-6xl md:text-[66px] mb-4 max-w-4xl mx-auto"
               style={{
                 color: 'var(--ink)',
-                letterSpacing: '-0.03em',
+                letterSpacing: '-0.02em',
                 lineHeight: '1.08',
               }}
             >
@@ -258,11 +266,6 @@ export default function Home() {
         />
 
         <div className="max-w-5xl mx-auto px-6 relative z-10">
-          <div className="mb-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: 'var(--slate)' }}>
-              NO MORE PILLS
-            </span>
-          </div>
 
           <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center mt-3">
             {/* Left Column */}

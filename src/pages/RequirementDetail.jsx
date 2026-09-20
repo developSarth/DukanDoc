@@ -31,6 +31,22 @@ import {
 } from 'lucide-react';
 import MarkdownRenderer from '@/components/MarkdownRenderer';
 
+function getTimelineBullets(text) {
+  if (!text) return ['3–7 working days under standard government service turnaround.'];
+  const lines = text
+    .replace(/^\d+\.\s*/gm, '')
+    .split(/\n+|;\s+/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+  if (lines.length > 1) return lines;
+  const sentences = text
+    .replace(/^\d+\.\s*/gm, '')
+    .split(/(?<=[.!?])\s+/)
+    .map((s) => s.trim())
+    .filter((s) => s.length > 2);
+  return sentences.length > 0 ? sentences : [text];
+}
+
 const SAMPLE_REQUIREMENTS = {
   'req-1': {
     id: 'req-1',
@@ -392,7 +408,7 @@ export default function RequirementDetail() {
                   <h2 className="text-lg sm:text-xl font-heading font-bold text-[#004043] mb-1.5">
                     What is it?
                   </h2>
-                  <div className="text-[14.5px] sm:text-[15px] leading-relaxed text-[#4B6B6C]">
+                  <div className="text-[14.5px] sm:text-[15px] leading-relaxed text-[#4B6B6C] font-normal">
                     <MarkdownRenderer content={item.description} />
                   </div>
                 </div>
@@ -402,7 +418,7 @@ export default function RequirementDetail() {
                     <h2 className="text-lg sm:text-xl font-heading font-bold text-[#004043] mb-1.5">
                       Why you need it
                     </h2>
-                    <div className="text-[14.5px] sm:text-[15px] leading-relaxed text-[#4B6B6C]">
+                    <div className="text-[14.5px] sm:text-[15px] leading-relaxed text-[#4B6B6C] font-normal">
                       <MarkdownRenderer content={item.why_required} />
                     </div>
                   </div>
@@ -425,7 +441,7 @@ export default function RequirementDetail() {
                       <ExternalLink className="h-4 w-4" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-400 block leading-none mb-1">
+                      <span className="text-[10px] font-medium uppercase tracking-wider text-slate-400 block leading-none mb-1">
                         Official Portal
                       </span>
                       {item.portal_url ? (
@@ -433,13 +449,13 @@ export default function RequirementDetail() {
                           href={item.portal_url}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center gap-1 font-bold text-[#004043] hover:underline text-xs sm:text-sm"
+                          className="inline-flex items-center gap-1 font-normal text-[#004043] hover:underline text-xs sm:text-sm"
                         >
                           <span>{item.portal_name || 'Government Filing Portal'}</span>
                           <ExternalLink className="h-3 w-3 opacity-70 flex-shrink-0" />
                         </a>
                       ) : (
-                        <span className="text-xs font-semibold text-slate-600">Local Municipal Office</span>
+                        <span className="text-xs font-normal text-slate-600">Local Municipal Office</span>
                       )}
                     </div>
                   </div>
@@ -449,14 +465,14 @@ export default function RequirementDetail() {
 
                   {/* Official Government Fees Block */}
                   <div className="flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded-full bg-[#E5F7E8] flex items-center justify-center text-[#156645] font-bold text-sm flex-shrink-0">
+                    <div className="w-8 h-8 rounded-full bg-[#E5F7E8] flex items-center justify-center text-[#156645] font-medium text-sm flex-shrink-0">
                       ₹
                     </div>
                     <div>
-                      <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-400 block leading-none mb-1">
+                      <span className="text-[10px] font-medium uppercase tracking-wider text-slate-400 block leading-none mb-1">
                         Official Government Fees
                       </span>
-                      <span className="text-xs sm:text-sm font-bold text-[#0A2528]">
+                      <span className="text-xs sm:text-sm font-normal text-[#0A2528]">
                         {item.official_fees || '₹0 (Free online registration)'}
                       </span>
                     </div>
@@ -475,9 +491,9 @@ export default function RequirementDetail() {
                 {item.required_documents && item.required_documents.length ? (
                   <ul className="space-y-2.5">
                     {item.required_documents.map((doc, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-[14px] text-[#4B6B6C]">
+                      <li key={i} className="flex items-start gap-2.5 text-[14px] text-[#4B6B6C] font-normal">
                         <span
-                          className="mt-0.5 flex h-4.5 w-4.5 flex-shrink-0 items-center justify-center rounded-full text-[10px] font-bold"
+                          className="mt-0.5 flex h-4.5 w-4.5 flex-shrink-0 items-center justify-center rounded-full text-[10px] font-medium"
                           style={{ backgroundColor: 'var(--signal)', color: 'var(--ink)' }}
                         >
                           {i + 1}
@@ -487,7 +503,7 @@ export default function RequirementDetail() {
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-xs text-slate-500">
+                  <p className="text-xs text-slate-500 font-normal">
                     Standard identity proof (Aadhaar, PAN) and business address proof required.
                   </p>
                 )}
@@ -496,42 +512,27 @@ export default function RequirementDetail() {
               {/* Separator */}
               <div className="border-t border-slate-100" />
 
-              {/* Block 4: Step-by-Step Procedure & Timeline */}
-              {item.process_and_timeline && (
-                <>
-                  <div className="p-5 sm:p-6 bg-[#FBFDFB]/40">
-                    <h2 className="text-lg sm:text-xl font-heading font-bold text-[#004043] mb-2.5 flex items-center gap-2">
-                      <Clock className="h-4.5 w-4.5 text-[#004043]" /> Step-by-Step Procedure &amp; Timeline
-                    </h2>
-                    <div className="text-[14px] text-[#4B6B6C] leading-relaxed">
-                      <MarkdownRenderer content={item.process_and_timeline} />
-                    </div>
-                  </div>
-                  <div className="border-t border-slate-100" />
-                </>
-              )}
-
-              {/* Block 5: Nearest Official Aaple Sarkar / CSC Kiosk */}
+              {/* Block 4: Nearest Official Aaple Sarkar / CSC Kiosk (if available) */}
               {item.nearest_govt_center && (
                 <>
                   <div className="p-5 sm:p-6">
                     <div className="p-4 rounded-xl border border-emerald-200/80 bg-emerald-50/40 dark:bg-emerald-950/20 shadow-2xs">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                         <div>
-                          <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-800">
+                          <div className="flex items-center gap-1.5 text-xs font-bold text-[#004043]">
                             <ShieldCheck className="h-4 w-4 text-emerald-600 flex-shrink-0" />
                             <span>Nearest Official Aaple Sarkar / CSC Kiosk</span>
                             {item.nearest_govt_center.distance_label && (
-                              <span className="text-[11px] font-bold text-blue-700 bg-blue-50 border border-blue-200 rounded-full px-2 py-0.5 ml-1 inline-flex items-center gap-0.5">
+                              <span className="text-[11px] font-medium text-emerald-800 bg-emerald-100/60 border border-emerald-200 rounded-full px-2 py-0.5 ml-1 inline-flex items-center gap-0.5">
                                 <Navigation className="h-2.5 w-2.5" />
                                 {item.nearest_govt_center.distance_label}
                               </span>
                             )}
                           </div>
-                          <h4 className="text-sm font-semibold text-foreground mt-1">
+                          <h4 className="text-sm font-normal text-foreground mt-1">
                             {item.nearest_govt_center.name}
                           </h4>
-                          <p className="text-xs text-muted-foreground mt-0.5 flex items-center gap-1">
+                          <p className="text-xs text-muted-foreground mt-0.5 flex items-center gap-1 font-normal">
                             <MapPin className="h-3 w-3 flex-shrink-0" />
                             <span className="line-clamp-1">{item.nearest_govt_center.location}</span>
                           </p>
@@ -539,7 +540,7 @@ export default function RequirementDetail() {
                         {item.nearest_govt_center.phone && (
                           <a
                             href={`tel:${item.nearest_govt_center.phone}`}
-                            className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-100 hover:bg-emerald-200 px-3 py-1.5 rounded-lg transition-colors flex-shrink-0"
+                            className="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-700 bg-emerald-100 hover:bg-emerald-200 px-3 py-1.5 rounded-lg transition-colors flex-shrink-0"
                           >
                             <Phone className="h-3.5 w-3.5" />
                             <span>Call Center</span>
@@ -552,75 +553,35 @@ export default function RequirementDetail() {
                 </>
               )}
 
-              {/* Block 6: YouTube Video Tutorials & Walkthroughs */}
+              {/* Block 5: YouTube Video Tutorials & Walkthroughs (Cascading, Dark Green, Compact) */}
               {item.youtube_guides && item.youtube_guides.length > 0 && (
-                <>
-                  <div className="p-5 sm:p-6">
-                    <h2 className="text-lg sm:text-xl font-heading font-bold text-[#004043] mb-1 flex items-center gap-2">
-                      <PlayCircle className="h-4.5 w-4.5 text-red-600" /> Video Tutorials &amp; Walkthroughs
-                    </h2>
-                    <p className="text-xs text-slate-500 mb-3.5">
-                      Watch step-by-step video application guides discovered for this clearance:
-                    </p>
-                    <div className="grid gap-3 sm:grid-cols-2">
-                      {item.youtube_guides.map((yt, i) => (
-                        <a
-                          key={i}
-                          href={yt.link}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="p-3.5 rounded-xl border border-red-200/60 bg-red-50/25 hover:border-red-300 hover:bg-red-50/50 transition-all flex flex-col justify-between group shadow-2xs"
-                        >
-                          <div>
-                            <div className="flex items-center gap-1.5 text-[11px] font-semibold text-red-600 mb-1">
-                              <Video className="h-3 w-3" />
-                              <span>YouTube Tutorial</span>
-                            </div>
-                            <h4 className="text-xs font-semibold text-[#004043] group-hover:text-red-700 leading-snug line-clamp-2">
-                              {yt.title}
-                            </h4>
-                            {yt.snippet && (
-                              <p className="text-[11px] text-slate-500 mt-1 line-clamp-2 leading-relaxed">
-                                {yt.snippet}
-                              </p>
-                            )}
-                          </div>
-                          <div className="mt-2.5 pt-2 border-t border-red-200/40 flex items-center justify-between text-xs font-semibold text-red-600 group-hover:text-red-700">
-                            <span>Watch Guide</span>
-                            <ExternalLink className="h-3 w-3" />
-                          </div>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="border-t border-slate-100" />
-                </>
-              )}
-
-              {/* Block 7: Step-by-Step Online Web Guides */}
-              {item.web_guides && item.web_guides.length > 0 && (
                 <div className="p-5 sm:p-6">
                   <h2 className="text-lg sm:text-xl font-heading font-bold text-[#004043] mb-1 flex items-center gap-2">
-                    <Globe className="h-4.5 w-4.5 text-blue-600" /> Official Guides &amp; Articles
+                    <PlayCircle className="h-4.5 w-4.5 text-[#004043]" /> Video Tutorials &amp; Walkthroughs
                   </h2>
-                  <div className="space-y-2 mt-3">
-                    {item.web_guides.map((wg, i) => (
+                  <p className="text-xs text-slate-500 mb-3.5 font-normal">
+                    Helpful video tutorials available for this requirement:
+                  </p>
+                  <div className="space-y-2.5">
+                    {item.youtube_guides.map((yt, i) => (
                       <a
                         key={i}
-                        href={wg.link}
+                        href={yt.link}
                         target="_blank"
                         rel="noreferrer"
-                        className="p-3 rounded-lg border border-slate-200 bg-white hover:border-blue-300 hover:bg-blue-50/20 transition-all block group shadow-2xs"
+                        className="p-3 rounded-xl border border-slate-200/90 bg-white hover:border-[#004043] hover:bg-[#004043]/[0.02] transition-all block group shadow-2xs animate-card-stagger"
+                        style={{ animationDelay: `${i * 0.08}s` }}
                       >
-                        <div className="text-xs font-semibold text-[#004043] group-hover:text-blue-600 flex items-center justify-between gap-2">
-                          <span className="line-clamp-1">{wg.title}</span>
-                          <ExternalLink className="h-3.5 w-3.5 flex-shrink-0 text-slate-400 group-hover:text-blue-600" />
+                        <div className="flex items-center justify-between gap-2">
+                          <div className="flex items-center gap-1.5 text-[11.5px] font-normal text-[#004043]">
+                            <Video className="h-3.5 w-3.5 text-[#004043] flex-shrink-0" />
+                            <span>YouTube Tutorial</span>
+                          </div>
+                          <ExternalLink className="h-3.5 w-3.5 flex-shrink-0 text-slate-400 group-hover:text-[#004043] transition-colors" />
                         </div>
-                        {wg.snippet && (
-                          <p className="text-[11px] text-slate-500 mt-1 line-clamp-2 leading-relaxed">
-                            {wg.snippet}
-                          </p>
-                        )}
+                        <h4 className="text-xs sm:text-[13px] font-normal text-[#4B6B6C] group-hover:text-[#004043] transition-colors leading-snug mt-1 line-clamp-2">
+                          {yt.title}
+                        </h4>
                       </a>
                     ))}
                   </div>
@@ -630,7 +591,7 @@ export default function RequirementDetail() {
           </Card>
         </div>
 
-        {/* ── RIGHT COLUMN: Stacked Support, Actions & Collapsible Reminder ── */}
+        {/* ── RIGHT COLUMN: Stacked Support, Actions & Official Guides (Equal Height) ── */}
         <div className="lg:col-span-5 space-y-4">
           {/* 1. Verified Experts / Local Professionals Dark Green Card */}
           <Card
@@ -642,7 +603,7 @@ export default function RequirementDetail() {
                 <div className="h-7 w-7 rounded-lg flex items-center justify-center bg-white/10 text-[#D0FF71]">
                   <Users className="h-4 w-4" />
                 </div>
-                <span className="text-[10.5px] font-bold uppercase tracking-wider text-[#D0FF71]">
+                <span className="text-[10.5px] font-medium uppercase tracking-wider text-[#D0FF71]">
                   Verified Experts
                 </span>
               </div>
@@ -651,13 +612,13 @@ export default function RequirementDetail() {
                 Local Professionals
               </h2>
 
-              <p className="text-[13px] leading-relaxed text-white/90 mb-2">
+              <p className="text-[13px] leading-relaxed text-white/90 mb-2 font-normal">
                 Verified experts who handle this requirement
                 {checklist?.location ? ` near ${checklist.location}` : ' near your location'}.
               </p>
 
-              <p className="text-[11.5px] text-white/65 leading-relaxed mb-4">
-                Connect with verified chartered accountants, legal advisors, and municipal agents who will handle the entire filing on your behalf.
+              <p className="text-[11.5px] text-white/65 leading-relaxed mb-4 font-normal">
+                Connect with verified chartered accountants, legal advisors, and municipal agents who will handle the filing on your behalf.
               </p>
 
               <Button
@@ -672,7 +633,7 @@ export default function RequirementDetail() {
                 style={{
                   backgroundColor: '#D0FF71',
                   color: '#004043',
-                  fontWeight: 600,
+                  fontWeight: 500,
                   fontSize: '13.5px',
                 }}
               >
@@ -691,7 +652,7 @@ export default function RequirementDetail() {
             </CardContent>
           </Card>
 
-          {/* 2. Simplified "Yes, you can do it yourself" Strip */}
+          {/* 2. Simplified "Can you do it yourself?" Section */}
           <div
             className="rounded-2xl p-4 border bg-white shadow-xs flex items-center justify-between gap-3"
             style={{ borderColor: 'rgba(0,64,67,0.10)' }}
@@ -705,20 +666,27 @@ export default function RequirementDetail() {
                 <UserCheck className="h-4.5 w-4.5" />
               </div>
               <div>
-                <p className="text-[10.5px] font-semibold uppercase tracking-wider text-slate-400">
+                <p className="text-xs sm:text-[13px] font-bold text-[#004043]">
                   Can you do it yourself?
                 </p>
-                <p className="text-[13.5px] font-bold text-[#0A2528]">
-                  {item.can_apply_self ? 'Yes — Self-serve online' : 'Assistance recommended'}
+                <p className="text-xs sm:text-[13px] font-normal text-[#4B6B6C]">
+                  {item.can_apply_self ? 'Yes' : 'Assistance recommended'}
                 </p>
               </div>
             </div>
-            <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700">
-              {item.difficulty || 'Easy'}
+            <span
+              className="px-2.5 py-0.5 rounded-full text-xs font-medium border"
+              style={{
+                borderColor: 'rgba(0,64,67,0.15)',
+                color: '#004043',
+                backgroundColor: 'rgba(0,64,67,0.04)',
+              }}
+            >
+              Difficulty: {item.difficulty || 'Easy'}
             </span>
           </div>
 
-          {/* 3. Collapsible "Set a reminder" Card */}
+          {/* 3. Collapsible "Filing Deadline / Set a reminder" Card */}
           <div
             className="rounded-2xl border bg-white shadow-xs overflow-hidden transition-all duration-300"
             style={{ borderColor: 'rgba(0,64,67,0.10)' }}
@@ -734,21 +702,16 @@ export default function RequirementDetail() {
                   <CalendarClock className="h-4.5 w-4.5 text-[#004043]" />
                 </div>
                 <div>
-                  <p className="text-[10.5px] font-semibold uppercase tracking-wider text-slate-400">
+                  <p className="text-xs sm:text-[13px] font-bold text-[#004043]">
                     Filing Deadline
                   </p>
-                  <p className="text-[13.5px] font-bold text-[#0A2528] flex items-center gap-1.5">
-                    <span>Set a reminder</span>
-                    {item.due_date && (
-                      <span className="text-[11px] font-semibold px-2 py-0.2 rounded-full bg-emerald-100 text-emerald-800">
-                        {format(new Date(item.due_date), 'd MMM yyyy')}
-                      </span>
-                    )}
+                  <p className="text-xs sm:text-[13px] font-normal text-[#4B6B6C] flex items-center gap-1.5">
+                    <span>{item.due_date ? format(new Date(item.due_date), 'd MMM yyyy') : 'Set a reminder'}</span>
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-1.5 text-xs text-[#004043] font-medium">
+              <div className="flex items-center gap-1.5 text-xs text-[#004043] font-normal">
                 <span>{reminderOpen ? 'Close' : 'Set date'}</span>
                 {reminderOpen ? (
                   <ChevronUp className="h-4 w-4" />
@@ -761,7 +724,7 @@ export default function RequirementDetail() {
             {/* Collapsible Calendar Body */}
             {reminderOpen && (
               <div className="p-4 pt-1 border-t border-slate-100 animate-scale-in flex flex-col items-center">
-                <p className="text-xs text-slate-500 mb-2.5 text-center">
+                <p className="text-xs text-slate-500 mb-2.5 text-center font-normal">
                   Select a deadline or choose a quick preset:
                 </p>
                 <div className="flex justify-center">
@@ -777,28 +740,66 @@ export default function RequirementDetail() {
             )}
           </div>
 
-          {/* 4. Expected Timeline Block */}
+          {/* 4. Expected Timeline Block (Aligned to Top, Bulleted Points) */}
           <div
-            className="rounded-2xl p-4 border bg-white shadow-xs flex items-center justify-between gap-3"
+            className="rounded-2xl p-4 border bg-white shadow-xs flex items-start justify-between gap-3"
             style={{ borderColor: 'rgba(0,64,67,0.10)' }}
           >
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-slate-100 text-[#004043]">
+            <div className="flex items-start gap-3">
+              <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-slate-100 text-[#004043] mt-0.5">
                 <Clock className="h-4.5 w-4.5" />
               </div>
-              <div>
-                <p className="text-[10.5px] font-semibold uppercase tracking-wider text-slate-400">
+              <div className="space-y-1.5">
+                <p className="text-xs sm:text-[13px] font-bold text-[#004043]">
                   Expected Timeline
                 </p>
-                <p className="text-[13.5px] font-normal text-[#4B6B6C]">
-                  {item.process_and_timeline || '3–7 working days'}
-                </p>
+                <ul className="space-y-1.5 text-xs sm:text-[13px] font-normal text-[#4B6B6C]">
+                  {getTimelineBullets(item.process_and_timeline).map((pt, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#004043] mt-1.5 flex-shrink-0" />
+                      <span>{pt}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-            <span className="text-[11px] font-medium text-slate-500 flex items-center gap-1">
+            <span className="text-[11px] font-medium text-slate-500 flex items-center gap-1 flex-shrink-0 mt-0.5">
               <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" /> Official standard
             </span>
           </div>
+
+          {/* 5. Official Guides & Articles Section (Moved Right Below Expected Timeline) */}
+          {((item.web_guides && item.web_guides.length > 0) || (item.sources && item.sources.length > 0)) && (
+            <div
+              className="rounded-2xl p-4 sm:p-5 border bg-white shadow-xs space-y-3"
+              style={{ borderColor: 'rgba(0,64,67,0.10)' }}
+            >
+              <h3 className="text-sm sm:text-base font-heading font-bold text-[#004043] flex items-center gap-2">
+                <Globe className="h-4 w-4 text-[#004043]" /> Official Guides &amp; Articles
+              </h3>
+              <div className="space-y-2">
+                {(item.web_guides && item.web_guides.length > 0
+                  ? item.web_guides
+                  : (item.sources || []).map((s) => ({ title: 'Official Government Portal Filing Guide', link: s }))
+                ).map((wg, i) => (
+                  <a
+                    key={i}
+                    href={wg.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-3 rounded-xl border border-slate-200/90 bg-white hover:border-[#004043] hover:bg-[#D0FF71]/25 transition-all block group shadow-2xs"
+                  >
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-xs sm:text-[13px] font-normal text-[#4B6B6C] group-hover:text-[#004043] line-clamp-2 transition-colors">
+                        {wg.title}
+                      </span>
+                      <ExternalLink className="h-3.5 w-3.5 flex-shrink-0 text-slate-400 group-hover:text-[#004043] transition-colors" />
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
 

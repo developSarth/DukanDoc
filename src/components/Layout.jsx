@@ -27,7 +27,20 @@ export default function Layout() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: 'var(--canvas)' }}>
+    <div className="min-h-screen flex flex-col relative" style={{ backgroundColor: 'var(--canvas)' }}>
+      {/* Subtle global mountain silhouette background watermark */}
+      <div
+        className="fixed right-0 bottom-0 top-0 w-full md:w-1/2 pointer-events-none opacity-[0.06] -z-10 select-none overflow-hidden"
+        style={{
+          backgroundImage: "url('/hero-bg.png')",
+          backgroundPosition: 'right bottom',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          maskImage: 'linear-gradient(to left, black 25%, transparent 95%)',
+          WebkitMaskImage: 'linear-gradient(to left, black 25%, transparent 95%)',
+        }}
+        aria-hidden="true"
+      />
 
       {/* ── Floating Nav Pill ────────────────────────────────────── */}
       <div className="sticky top-3 z-50 flex justify-center px-4 pointer-events-none">
@@ -254,7 +267,10 @@ export default function Layout() {
             style={{ borderColor: 'rgba(243,240,238,0.12)', color: 'rgba(243,240,238,0.40)' }}
           >
             <p>© {new Date().getFullYear()} LegalDoc. Free &amp; independent.</p>
-            <p>Made in India 🇮🇳</p>
+            <p className="inline-flex items-center gap-1.5">
+              <span>Made in India</span>
+              <img src="/ind.svg" alt="India" className="w-3.5 h-2.5 object-cover rounded-[1px] inline-block" />
+            </p>
           </div>
         </div>
       </footer>

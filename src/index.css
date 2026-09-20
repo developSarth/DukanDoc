@@ -53,10 +53,10 @@
     --radius:         1rem;
 
     /* ── Typography ──────────────────────────────────────────────── */
-    --font-heading: 'Geist', 'Outfit', 'Inter', ui-sans-serif, system-ui, sans-serif;
-    --font-body:    'Geist', 'Outfit', 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-heading: 'Manrope', 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-body:    'Manrope', 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
     --font-serif:   'Lora', Georgia, serif;
-    --font-display: 'Geist', 'Outfit', 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Manrope', 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
     --font-mono:    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
     /* ── Sidebar (keep existing) ─────────────────────────────────── */
