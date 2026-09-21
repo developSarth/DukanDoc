@@ -56,13 +56,22 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 # 2. FinalAgent Exact Functions
 # ==========================================
 
-def ask_llm(prompt: str, max_tokens: int = 1200) -> str:
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        max_tokens=max_tokens,
-        messages=[{"role": "user", "content": prompt}]
-    )
-    return response.choices[0].message.content or ""
+def ask_llm(prompt: str, max_tokens: int = 1500) -> str:
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-2024-08-06",
+            max_tokens=max_tokens,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        return response.choices[0].message.content or ""
+    except Exception as e:
+        print(f"[OpenAI Warning] gpt-4o-2024-08-06 failed: {e}, falling back to gpt-4o")
+        response = client.chat.completions.create(
+            model="gpt-4o",
+            max_tokens=max_tokens,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        return response.choices[0].message.content or ""
 
 
 # ==========================================
@@ -144,7 +153,7 @@ def search_places(query: str, city: str, max_results: int = 5) -> List[Dict[str,
                 "q": f"{query} in {city}",
                 "api_key": SERPAPI_KEY,
             }
-            resp = requests.get(url, params=params, timeout=5.0).json()
+            resp = requests.get(url, params=params, timeout=8.0).json()
             for place in resp.get("local_results", [])[:max_results]:
                 results.append({
                     "name": place.get("title") or place.get("name"),
@@ -176,7 +185,7 @@ def search_web(query: str, engine: str = "google", num: int = 4) -> List[Dict[st
         "num": num
     }
     try:
-        resp = requests.get(url, params=params, timeout=5.0).json()
+        resp = requests.get(url, params=params, timeout=8.0).json()
         results = []
         for item in resp.get("organic_results", [])[:num]:
             results.append({
@@ -401,7 +410,7 @@ def health_check():
     return {
         "status": "online",
         "agent": "DukanDoc AI Compliance Agent",
-        "llm": "OpenAI gpt-4o-mini",
+        "llm": "OpenAI gpt-4o-2024-08-06",
         "search_engine": "SerpAPI Google Maps & Search",
         "knowledge_base": "Centers.xlsx (4,198 Official Govt Centers)"
     }
