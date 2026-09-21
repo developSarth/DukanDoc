@@ -294,7 +294,8 @@ export const base44 = {
 
   functions: {
     async invoke(functionName, payload = {}) {
-      const BACKEND_URL = 'http://127.0.0.1:8000';
+      // Relative URL routes through Vite proxy in dev, and Nginx proxy in production
+      const BACKEND_URL = '';
 
       if (functionName === 'generateChecklist') {
         try {
